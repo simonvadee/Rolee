@@ -13,6 +13,7 @@ class StartViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print("start loaded")
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
