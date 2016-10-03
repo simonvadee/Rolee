@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -85,65 +86,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-2Z-wRG">
-                                <rect key="frame" x="145" y="200" width="311" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fFg-f1-rVw">
+                                <rect key="frame" x="222" y="74" width="156" height="156"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
+                                <rect key="frame" x="532" y="28" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.93432754489725833" green="0.76064293945487627" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="settings-button"/>
+                                <connections>
+                                    <segue destination="kLR-bH-ugI" kind="show" id="ZXH-Sp-7Y2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-XQ-9ud">
+                                <rect key="frame" x="20" y="280" width="560" height="300"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="33x-t6-goB">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="92"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-fn-mUC">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="120"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-Dm-7Fj">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="92"/>
-                                                <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Levels">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="scv-CD-cbA" kind="show" id="Qzu-m0-zF8"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-jP-Moa">
-                                                <rect key="frame" x="112" y="0.0" width="87" height="92"/>
-                                                <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Leaderboard">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="m1O-T5-FXw" kind="show" id="994-hl-HoD"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
-                                                <rect key="frame" x="224" y="0.0" width="87" height="92"/>
-                                                <color key="backgroundColor" red="0.93432754489725833" green="0.76064293945487627" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
-                                                <state key="normal" title="⚙"/>
-                                                <connections>
-                                                    <segue destination="kLR-bH-ugI" kind="show" id="ZXH-Sp-7Y2"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iris Poot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfA-kU-xRV">
+                                                <rect key="frame" x="249" y="49" width="63" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bVj-CL-oVo">
-                                        <rect key="frame" x="0.0" y="108" width="311" height="92"/>
+                                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="cfA-kU-xRV" firstAttribute="centerX" secondItem="j4M-fn-mUC" secondAttribute="centerX" id="3Hr-aX-GPA"/>
+                                            <constraint firstItem="cfA-kU-xRV" firstAttribute="centerY" secondItem="j4M-fn-mUC" secondAttribute="centerY" id="xHA-Ey-qau"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-2Z-wRG">
+                                        <rect key="frame" x="0.0" y="130" width="560" height="170"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-lU-5vQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="92"/>
-                                                <color key="backgroundColor" red="1" green="0.3784704842944846" blue="0.32116069467736197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Play">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="33x-t6-goB">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-Dm-7Fj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
+                                                        <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <state key="normal" title="Levels">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="3"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="scv-CD-cbA" kind="show" id="Qzu-m0-zF8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-jP-Moa">
+                                                        <rect key="frame" x="285" y="0.0" width="275" height="80"/>
+                                                        <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <state key="normal" title="Leaderboard">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="3"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="m1O-T5-FXw" kind="show" id="994-hl-HoD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-lU-5vQ">
+                                                <rect key="frame" x="0.0" y="90" width="560" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="PLAY">
+                                                    <color key="titleColor" red="0.54117647058823526" green="0.0" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="ty6-xM-lQm" kind="show" id="B9r-Gk-4sf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="I0a-Is-9qE"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UNd-2Z-wRG" firstAttribute="centerX" secondItem="f0f-Fl-YcJ" secondAttribute="centerX" id="6yY-5B-jsW"/>
-                            <constraint firstItem="UNd-2Z-wRG" firstAttribute="centerY" secondItem="f0f-Fl-YcJ" secondAttribute="centerY" id="ofA-87-sBg"/>
+                            <constraint firstItem="fFg-f1-rVw" firstAttribute="centerX" secondItem="f0f-Fl-YcJ" secondAttribute="centerX" id="2GN-Nk-JP9"/>
+                            <constraint firstItem="JtA-XQ-9ud" firstAttribute="top" secondItem="fFg-f1-rVw" secondAttribute="bottom" constant="50" id="7bc-yh-ziP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JtA-XQ-9ud" secondAttribute="trailing" id="Z8n-bj-U0p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V3b-uI-ctD" secondAttribute="trailing" id="ff8-Xu-L1w"/>
+                            <constraint firstItem="V3b-uI-ctD" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="8" id="tNW-f4-xVD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JtA-XQ-9ud" secondAttribute="leading" id="vLZ-8z-slj"/>
+                            <constraint firstItem="fFg-f1-rVw" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="54" id="vOa-Ch-pSJ"/>
+                            <constraint firstItem="swD-U9-cUP" firstAttribute="top" secondItem="JtA-XQ-9ud" secondAttribute="bottom" constant="20" id="vgr-JY-u4x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="zBl-Cr-pBd"/>
@@ -247,5 +298,6 @@
     </scenes>
     <resources>
         <image name="logo" width="156" height="156"/>
+        <image name="settings-button" width="48" height="48"/>
     </resources>
 </document>
