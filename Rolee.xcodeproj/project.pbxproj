@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FDDCDE1DA5883D0029F586 /* bg-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FDDCDD1DA5883D0029F586 /* bg-red.png */; };
+		04FDDCE01DA590EF0029F586 /* retry.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FDDCDF1DA590EF0029F586 /* retry.png */; };
+		04FDDCE41DA591430029F586 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FDDCE11DA591430029F586 /* cross.png */; };
+		04FDDCE51DA591430029F586 /* empty-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FDDCE21DA591430029F586 /* empty-star.png */; };
+		04FDDCE61DA591430029F586 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FDDCE31DA591430029F586 /* star.png */; };
 		4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB471DA02E7C00075ADA /* AppDelegate.swift */; };
 		4261CB4A1DA02E7C00075ADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB491DA02E7C00075ADA /* ViewController.swift */; };
 		4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB4B1DA02E7C00075ADA /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04FDDCDD1DA5883D0029F586 /* bg-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-red.png"; path = "../../../../Downloads/bg-red.png"; sourceTree = "<group>"; };
+		04FDDCDF1DA590EF0029F586 /* retry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retry.png; path = Assets.xcassets/AppIcon.appiconset/retry.png; sourceTree = "<group>"; };
+		04FDDCE11DA591430029F586 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cross.png; path = Assets.xcassets/AppIcon.appiconset/cross.png; sourceTree = "<group>"; };
+		04FDDCE21DA591430029F586 /* empty-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "empty-star.png"; path = "Assets.xcassets/AppIcon.appiconset/empty-star.png"; sourceTree = "<group>"; };
+		04FDDCE31DA591430029F586 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Assets.xcassets/AppIcon.appiconset/star.png; sourceTree = "<group>"; };
 		4261CB441DA02E7C00075ADA /* Rolee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rolee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261CB471DA02E7C00075ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4261CB491DA02E7C00075ADA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +104,11 @@
 				4261CB471DA02E7C00075ADA /* AppDelegate.swift */,
 				4261CB491DA02E7C00075ADA /* ViewController.swift */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
+				04FDDCE11DA591430029F586 /* cross.png */,
+				04FDDCE21DA591430029F586 /* empty-star.png */,
+				04FDDCE31DA591430029F586 /* star.png */,
+				04FDDCDF1DA590EF0029F586 /* retry.png */,
+				04FDDCDD1DA5883D0029F586 /* bg-red.png */,
 				42747A7B1DA165E40011E340 /* EndLevelViewController.swift */,
 				42747A791DA165590011E340 /* GameViewController.swift */,
 				42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */,
@@ -198,8 +213,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FDDCE51DA591430029F586 /* empty-star.png in Resources */,
+				04FDDCE41DA591430029F586 /* cross.png in Resources */,
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
+				04FDDCE01DA590EF0029F586 /* retry.png in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
+				04FDDCE61DA591430029F586 /* star.png in Resources */,
+				04FDDCDE1DA5883D0029F586 /* bg-red.png in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
