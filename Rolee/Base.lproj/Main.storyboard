@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -85,10 +86,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fFg-f1-rVw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fFg-f1-rVw">
                                 <rect key="frame" x="222" y="118" width="156" height="156"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
                                 <rect key="frame" x="532" y="72" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.93432754489725833" green="0.76064293945487627" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="settings-button"/>
@@ -96,10 +97,10 @@
                                     <segue destination="kLR-bH-ugI" kind="show" id="ZXH-Sp-7Y2"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-XQ-9ud">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-XQ-9ud">
                                 <rect key="frame" x="20" y="324" width="560" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-fn-mUC">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-fn-mUC">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Iris Poot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfA-kU-xRV">
@@ -112,49 +113,45 @@
                                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="cfA-kU-xRV" firstAttribute="centerX" secondItem="j4M-fn-mUC" secondAttribute="centerX" id="3Hr-aX-GPA"/>
-                                            <constraint firstItem="cfA-kU-xRV" firstAttribute="centerY" secondItem="j4M-fn-mUC" secondAttribute="centerY" id="xHA-Ey-qau"/>
+                                            <constraint firstItem="cfA-kU-xRV" firstAttribute="top" secondItem="j4M-fn-mUC" secondAttribute="top" constant="40" id="CNo-N2-hGU"/>
+                                            <constraint firstAttribute="leading" secondItem="j4M-fn-mUC" secondAttribute="leading" constant="32" id="DcA-3X-eYh"/>
+                                            <constraint firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="a1q-Sy-RZR"/>
+                                            <constraint firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="esd-r3-dYH"/>
+                                            <constraint firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="10" id="tDt-CP-hyZ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-2Z-wRG">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-2Z-wRG">
                                         <rect key="frame" x="0.0" y="130" width="560" height="170"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="33x-t6-goB">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="33x-t6-goB">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-Dm-7Fj">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-Dm-7Fj">
                                                         <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
-                                                        <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.17959532288270261" green="0.55903445512820515" blue="0.4905898886622827" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <state key="normal" title="Levels">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="3"/>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
-                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="scv-CD-cbA" kind="show" id="Qzu-m0-zF8"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-jP-Moa">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-jP-Moa">
                                                         <rect key="frame" x="285" y="0.0" width="275" height="80"/>
-                                                        <color key="backgroundColor" red="0.30928476265301941" green="0.31673434451078031" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.17761319082093055" green="0.55286458333333333" blue="0.48517541610314041" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <state key="normal" title="Leaderboard">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="3"/>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
-                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="m1O-T5-FXw" kind="show" id="994-hl-HoD"/>
@@ -162,12 +159,12 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-lU-5vQ">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-lU-5vQ">
                                                 <rect key="frame" x="0.0" y="90" width="560" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="PLAY">
-                                                    <color key="titleColor" red="0.54117647058823526" green="0.0" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.54117647059999996" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
@@ -187,10 +184,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fFg-f1-rVw" firstAttribute="centerX" secondItem="f0f-Fl-YcJ" secondAttribute="centerX" id="2GN-Nk-JP9"/>
-                            <constraint firstItem="JtA-XQ-9ud" firstAttribute="centerX" secondItem="fFg-f1-rVw" secondAttribute="centerX" id="Diz-ny-9RA"/>
-                            <constraint firstItem="JtA-XQ-9ud" firstAttribute="top" secondItem="fFg-f1-rVw" secondAttribute="bottom" constant="50" id="IF2-NK-3ZX"/>
-                            <constraint firstItem="JtA-XQ-9ud" firstAttribute="trailing" secondItem="V3b-uI-ctD" secondAttribute="trailing" id="XgO-gV-R1q"/>
-                            <constraint firstAttribute="bottom" secondItem="JtA-XQ-9ud" secondAttribute="bottom" constant="20" symbolic="YES" id="XkR-s5-OyT"/>
+                            <constraint firstItem="JtA-XQ-9ud" firstAttribute="top" secondItem="fFg-f1-rVw" secondAttribute="bottom" constant="60" id="7bc-yh-ziP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JtA-XQ-9ud" secondAttribute="trailing" id="Z8n-bj-U0p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V3b-uI-ctD" secondAttribute="trailing" id="ff8-Xu-L1w"/>
                             <constraint firstItem="V3b-uI-ctD" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="8" id="tNW-f4-xVD"/>
                             <constraint firstItem="fFg-f1-rVw" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="54" id="vOa-Ch-pSJ"/>
@@ -210,7 +205,7 @@
                         <viewControllerLayoutGuide type="top" id="cpM-2d-lDL"/>
                         <viewControllerLayoutGuide type="bottom" id="3Lr-0j-cML"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm">
+                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
