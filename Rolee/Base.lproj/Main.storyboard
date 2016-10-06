@@ -210,7 +210,7 @@
                         <viewControllerLayoutGuide type="top" id="cpM-2d-lDL"/>
                         <viewControllerLayoutGuide type="bottom" id="3Lr-0j-cML"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm">
+                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
