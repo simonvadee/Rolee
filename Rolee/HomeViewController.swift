@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print("homeview loaded")
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
