@@ -288,7 +288,22 @@
                     <view key="view" contentMode="scaleToFill" id="59r-ue-7lk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6j2-k7-ODe">
+                                <rect key="frame" x="30" y="40" width="540" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6j2-k7-ODe" firstAttribute="top" secondItem="btp-eY-csz" secondAttribute="bottom" constant="20" id="EbP-65-vnX"/>
+                            <constraint firstItem="clM-8O-Jcj" firstAttribute="top" secondItem="6j2-k7-ODe" secondAttribute="bottom" constant="20" id="hit-7L-gmC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6j2-k7-ODe" secondAttribute="trailing" constant="10" id="rpD-s0-veQ"/>
+                            <constraint firstItem="6j2-k7-ODe" firstAttribute="leading" secondItem="59r-ue-7lk" secondAttribute="leadingMargin" constant="10" id="uGd-nA-Ryc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Leaderboard" id="sEG-yg-Sej"/>
                 </viewController>
