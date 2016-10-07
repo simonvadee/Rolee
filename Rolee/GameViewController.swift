@@ -12,18 +12,20 @@ class GameViewController: UIViewController {
 	
 	private var level = 5
 	
-	
 	@IBOutlet weak var gameScene: GameScene! {
 		didSet {
 			gameScene.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(initScene(_:))))
 		}
 	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.navigationBarHidden = true
+	}
 
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		gameScene.animating = true
-		self.navigationController?.navigationBarHidden = true
-		
 	}
 	
 	func initScene(recognizer: UITapGestureRecognizer) {
@@ -37,7 +39,7 @@ class GameViewController: UIViewController {
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
-		super.viewDidAppear(animated)
+		super.viewWillDisappear(animated)
 		gameScene.animating = false
 	}
 }

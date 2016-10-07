@@ -18,21 +18,30 @@ class ObstacleBehavior: UIDynamicBehavior {
 	
 	private let itemBehavior : UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
-		behavior.elasticity = 1
+		behavior.elasticity = 0.75
+		behavior.allowsRotation = true
 		return behavior
 	}()
 	
 	override init() {
 		super.init()
 		addChildBehavior(collider)
+		addChildBehavior(itemBehavior)
+	}
+	
+	func addBarrier(path: UIBezierPath, named name: String) {
+		collider.removeBoundaryWithIdentifier(name)
+		collider.addBoundaryWithIdentifier(name, forPath: path)
 	}
 	
 	func addItem(item: UIDynamicItem) {
 		collider.addItem(item)
+		itemBehavior.addItem(item)
 	}
 	
 	func removeItem(item: UIDynamicItem) {
 		collider.removeItem(item)
+		itemBehavior.removeItem(item)
 	}
 
 }
