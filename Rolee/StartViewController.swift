@@ -12,7 +12,7 @@ class StartViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("start loaded")
+		print("start loaded", terminator: "")
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
@@ -24,7 +24,7 @@ class StartViewController: UIViewController {
 
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		print("before segue")
+		print("before segue", terminator: "")
 	}
 }
 
