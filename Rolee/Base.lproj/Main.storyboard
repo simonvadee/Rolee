@@ -86,8 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
-                                <rect key="frame" x="532" y="72" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
+                                <rect key="frame" x="532" y="28" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.93432754489725833" green="0.76064293945487627" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="settings-button"/>
                                 <connections>
@@ -95,10 +95,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-XQ-9ud">
-                                <rect key="frame" x="20" y="324" width="560" height="256"/>
+                                <rect key="frame" x="20" y="280" width="560" height="344"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-fn-mUC">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="164"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iris Poot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfA-kU-xRV">
                                                 <rect key="frame" x="249" y="27" width="63" height="21"/>
@@ -131,7 +131,7 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-2Z-wRG">
-                                        <rect key="frame" x="0.0" y="86" width="560" height="170"/>
+                                        <rect key="frame" x="0.0" y="174" width="560" height="170"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="33x-t6-goB">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="80"/>
@@ -200,9 +200,16 @@
                             <constraint firstAttribute="bottom" secondItem="JtA-XQ-9ud" secondAttribute="bottom" constant="20" symbolic="YES" id="XkR-s5-OyT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V3b-uI-ctD" secondAttribute="trailing" id="ff8-Xu-L1w"/>
                             <constraint firstAttribute="bottomMargin" secondItem="JtA-XQ-9ud" secondAttribute="bottom" constant="-24" id="lr2-E3-PG6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JtA-XQ-9ud" secondAttribute="bottom" constant="-24" id="pMf-xe-xYR"/>
                             <constraint firstItem="V3b-uI-ctD" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="8" id="tNW-f4-xVD"/>
                             <constraint firstItem="fFg-f1-rVw" firstAttribute="top" secondItem="hMw-jG-f4F" secondAttribute="bottom" constant="54" id="vOa-Ch-pSJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XkR-s5-OyT"/>
+                                <exclude reference="lr2-E3-PG6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="zBl-Cr-pBd"/>
                 </viewController>
