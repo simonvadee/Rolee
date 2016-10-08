@@ -10,38 +10,42 @@ import UIKit
 
 class ObstacleBehavior: UIDynamicBehavior {
 
-	private let collider: UICollisionBehavior = {
-		let collider = UICollisionBehavior()
-		collider.translatesReferenceBoundsIntoBoundary = true
-		return collider
+	private let continuousPush: UIPushBehavior = {
+		let push = UIPushBehavior(items: [], mode: .Continuous)
+		push.setAngle( CGFloat(M_PI_2), magnitude: 10)
+		push.action = {
+			push.angle =  -push.angle
+		}
+		return push
 	}()
+	
+	var collider: UICollisionBehavior? {
+		didSet {
+			addChildBehavior(collider!)
+		}
+	}
 	
 	private let itemBehavior : UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
-		behavior.elasticity = 0.75
+		behavior.elasticity = 1
 		behavior.allowsRotation = true
 		return behavior
 	}()
 	
 	override init() {
 		super.init()
-		addChildBehavior(collider)
 		addChildBehavior(itemBehavior)
-	}
-	
-	func addBarrier(path: UIBezierPath, named name: String) {
-		collider.removeBoundaryWithIdentifier(name)
-		collider.addBoundaryWithIdentifier(name, forPath: path)
+		addChildBehavior(continuousPush)
 	}
 	
 	func addItem(item: UIDynamicItem) {
-		collider.addItem(item)
 		itemBehavior.addItem(item)
+		continuousPush.addItem(item)
 	}
 	
 	func removeItem(item: UIDynamicItem) {
-		collider.removeItem(item)
 		itemBehavior.removeItem(item)
+		continuousPush.removeItem(item)
 	}
 
 }

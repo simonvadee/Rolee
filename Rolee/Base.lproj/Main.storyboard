@@ -231,35 +231,23 @@
                         <viewControllerLayoutGuide type="top" id="cpM-2d-lDL"/>
                         <viewControllerLayoutGuide type="bottom" id="3Lr-0j-cML"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm">
+                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="ISL-Vb-bAw" firstAttribute="top" secondItem="Lx8-Pd-sBm" secondAttribute="top" id="35t-S9-GOl"/>
-                            <constraint firstItem="ISL-Vb-bAw" firstAttribute="leading" secondItem="Lx8-Pd-sBm" secondAttribute="leading" id="83m-kw-baY"/>
-                            <constraint firstAttribute="trailing" secondItem="ISL-Vb-bAw" secondAttribute="trailing" id="G5c-ON-bjN"/>
-                            <constraint firstItem="ISL-Vb-bAw" firstAttribute="bottom" secondItem="3Lr-0j-cML" secondAttribute="top" id="LsU-44-Cga"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameScene" destination="ISL-Vb-bAw" id="R95-ZX-clY"/>
+                        <outlet property="gameScene" destination="Lx8-Pd-sBm" id="Kwi-T9-eeQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iit-KU-DAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4560" y="50"/>
         </scene>
-        <!--End Level View Controller-->
+        <!--View Controller-->
         <scene sceneID="ETD-yS-rNq">
             <objects>
-                <viewController id="xbp-D5-Oej" customClass="EndLevelViewController" sceneMemberID="viewController">
+                <viewController id="xbp-D5-Oej" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t3a-oR-slm"/>
                         <viewControllerLayoutGuide type="bottom" id="Ppq-VS-BvJ"/>
@@ -267,6 +255,12 @@
                     <view key="view" contentMode="scaleToFill" id="Oer-Qz-kX0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>

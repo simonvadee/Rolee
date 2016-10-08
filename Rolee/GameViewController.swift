@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
 	
 	private var level = 5
 	
-	@IBOutlet weak var gameScene: GameScene! {
+	@IBOutlet var gameScene: GameScene! {
 		didSet {
 			gameScene.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(initScene(_:))))
 		}
