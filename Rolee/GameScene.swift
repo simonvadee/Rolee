@@ -25,7 +25,7 @@ class GameScene: UIView, UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate 
 		collider.collisionDelegate = self
 		return collider
 	}()
-	
+	var snap: UISnapBehavior? = nil
 	private let ballBehavior = BallBehavior()
 	private let obstaclesBehavior = ObstacleBehavior()
 	private let exitBehavior = BallBehavior()
@@ -49,7 +49,7 @@ class GameScene: UIView, UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate 
 	
 	private var exitSize = CGSize(width: 100, height: 100)
 	private var ballRadius = CGFloat(50)
-	
+
 	private var obstacleSize: CGSize {
 		let x = CGFloat.random(50, max: 100)
 		let y = CGFloat.random(50, max: 100)
@@ -115,6 +115,9 @@ class GameScene: UIView, UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate 
 		collider.addItem(exit)
 		exitBehavior.addItem(exit)
 	}
-
+	
+	func snapBall(recognizer: UITapGestureRecognizer) {
+		ballBehavior.snapBall(recognizer.locationInView(self))
+	}
 	
 }

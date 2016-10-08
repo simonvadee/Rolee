@@ -14,7 +14,9 @@ class GameViewController: UIViewController {
 	
 	@IBOutlet var gameScene: GameScene! {
 		didSet {
-			gameScene.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(initScene(_:))))
+			let recognizer = UITapGestureRecognizer(target: self, action:#selector(initScene(_:)))
+			recognizer.addTarget(gameScene, action: #selector(GameScene.snapBall(_:)))
+			gameScene.addGestureRecognizer(recognizer)
 		}
 	}
 	
@@ -28,6 +30,11 @@ class GameViewController: UIViewController {
 		gameScene.animating = true
 	}
 	
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		gameScene.animating = false
+	}
+	
 	func initScene(recognizer: UITapGestureRecognizer) {
 		if recognizer.state == .Ended {
 			gameScene.createBall()
@@ -38,9 +45,5 @@ class GameViewController: UIViewController {
 		}
 	}
 	
-	override func viewWillDisappear(animated: Bool) {
-		super.viewWillDisappear(animated)
-		gameScene.animating = false
-	}
 }
 
