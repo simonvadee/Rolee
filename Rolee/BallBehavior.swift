@@ -10,23 +10,32 @@ import UIKit
 
 class BallBehavior: UIDynamicBehavior {
 
-	private let collider: UICollisionBehavior = {
-		let collider = UICollisionBehavior()
-		collider.translatesReferenceBoundsIntoBoundary = true
-		return collider
-	}()
-
-	override init() {
-		super.init()
-		addChildBehavior(collider)
+	private var ball: UIView? = nil
+	private var snap: UISnapBehavior? {
+		didSet {
+			addChildBehavior(snap!)
+		}
 	}
 	
-	func addItem(item: UIDynamicItem) {
-		collider.addItem(item)
+	var collider: UICollisionBehavior? {
+		didSet {
+			addChildBehavior(collider!)
+		}
 	}
-
+	
+	func addItem(item: UIView) {
+		ball = item
+	}
+	
 	func removeItem(item: UIDynamicItem) {
-		collider.removeItem(item)
 	}
-
+	
+	func snapBall(dest: CGPoint) {
+		if (snap != nil) {
+			removeChildBehavior(snap!)
+		}
+		snap = UISnapBehavior(item: ball!, snapToPoint: dest)
+	}
+	
 }
+

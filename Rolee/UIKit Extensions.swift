@@ -9,9 +9,9 @@
 import UIKit
 
 extension CGFloat {
-	static func random(min: Int, max: Int) -> CGFloat {
+	static func random(min: CGFloat, max: CGFloat) -> CGFloat {
 		var random = CGFloat(arc4random() % UInt32(max))
-		random = random > CGFloat(min) ? random : random + CGFloat(min)
+		random = random > min ? random : random + min
 		return random
     }
 }
