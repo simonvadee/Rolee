@@ -26,6 +26,7 @@
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811781DA115350064BDF7 /* LevelsViewController.swift */; };
+		F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		42E811781DA115350064BDF7 /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
+				F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */,
 				42747A791DA165590011E340 /* GameViewController.swift */,
 				4252C1FA1DA6860800572594 /* GameScene.swift */,
 				423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */,
@@ -243,6 +246,7 @@
 				4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */,
 				42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */,
 				42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */,
+				F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */,
 				42747A7C1DA165E40011E340 /* EndLevelViewController.swift in Sources */,
 				42747A7A1DA165590011E340 /* GameViewController.swift in Sources */,
 				423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */,
