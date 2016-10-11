@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04F62BE31DA92B6F0006FFF0 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F62BE11DA92B6F0006FFF0 /* cross.png */; };
-		04F62BE41DA92B6F0006FFF0 /* empty-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F62BE21DA92B6F0006FFF0 /* empty-star.png */; };
-		04F62BE61DA92BA70006FFF0 /* retry.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F62BE51DA92BA70006FFF0 /* retry.png */; };
 		421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */; };
 		423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */; };
 		423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56231DA7B6F20039B7D3 /* BallBehavior.swift */; };
@@ -42,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04F62BE11DA92B6F0006FFF0 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cross.png; path = "../../Developer/old/Rolee-master/Rolee/Assets.xcassets/AppIcon.appiconset/cross.png"; sourceTree = "<group>"; };
-		04F62BE21DA92B6F0006FFF0 /* empty-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "empty-star.png"; path = "../../Developer/old/Rolee-master/Rolee/Assets.xcassets/AppIcon.appiconset/empty-star.png"; sourceTree = "<group>"; };
-		04F62BE51DA92BA70006FFF0 /* retry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retry.png; path = "../../Developer/old/Rolee-master/Rolee/Assets.xcassets/AppIcon.appiconset/retry.png"; sourceTree = "<group>"; };
 		421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathsView.swift; sourceTree = "<group>"; };
 		423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Extensions.swift"; sourceTree = "<group>"; };
 		423A56231DA7B6F20039B7D3 /* BallBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallBehavior.swift; sourceTree = "<group>"; };
@@ -225,9 +219,6 @@
 			files = (
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
-				04F62BE41DA92B6F0006FFF0 /* empty-star.png in Resources */,
-				04F62BE31DA92B6F0006FFF0 /* cross.png in Resources */,
-				04F62BE61DA92BA70006FFF0 /* retry.png in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
