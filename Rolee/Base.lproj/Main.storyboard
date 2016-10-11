@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -28,7 +29,7 @@
                                 <rect key="frame" x="222" y="91" width="156" height="156"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ggk-fx-FsD" firstAttribute="centerX" secondItem="mIC-9Z-meK" secondAttribute="centerX" id="Ep9-gf-I02"/>
@@ -62,7 +63,7 @@
                     <view key="view" contentMode="scaleToFill" id="tMZ-yi-3T1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Levels" id="vXa-dq-4Gw"/>
                 </viewController>
@@ -84,7 +85,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-uI-ctD">
                                 <rect key="frame" x="532" y="28" width="48" height="48"/>
-                                <color key="backgroundColor" red="0.93432754489725833" green="0.76064293945487627" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.91251963376998901" green="0.69322681427001953" blue="0.99945878982543945" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="settings-button"/>
                                 <connections>
                                     <segue destination="kLR-bH-ugI" kind="show" id="ZXH-Sp-7Y2"/>
@@ -106,7 +107,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkr-WP-oc5">
-                                                <rect key="frame" x="90" y="98" width="92" height="24"/>
+                                                <rect key="frame" x="90" y="98" width="91.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.89350961539999996" green="0.89350961539999996" blue="0.89350961539999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -121,7 +122,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="cfA-kU-xRV" firstAttribute="centerX" secondItem="j4M-fn-mUC" secondAttribute="centerX" id="3Hr-aX-GPA"/>
                                             <constraint firstItem="GRV-Vk-ANY" firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="34" id="5r5-3E-d0F"/>
@@ -147,7 +148,7 @@
                                                         <color key="backgroundColor" red="0.17959532288270261" green="0.55903445512820515" blue="0.4905898886622827" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <state key="normal" title="Levels">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
@@ -161,7 +162,7 @@
                                                         <color key="backgroundColor" red="0.17761319082093055" green="0.55286458333333333" blue="0.48517541610314041" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <state key="normal" title="Leaderboard">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
@@ -174,7 +175,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-lU-5vQ">
                                                 <rect key="frame" x="0.0" y="90" width="560" height="80"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="PLAY">
                                                     <color key="titleColor" red="0.54117647059999996" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -197,7 +198,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fFg-f1-rVw" firstAttribute="centerX" secondItem="f0f-Fl-YcJ" secondAttribute="centerX" id="2GN-Nk-JP9"/>
                             <constraint firstItem="JtA-XQ-9ud" firstAttribute="centerX" secondItem="fFg-f1-rVw" secondAttribute="centerX" id="Diz-ny-9RA"/>
@@ -230,20 +231,23 @@
                         <viewControllerLayoutGuide type="top" id="cpM-2d-lDL"/>
                         <viewControllerLayoutGuide type="bottom" id="3Lr-0j-cML"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" id="Lx8-Pd-sBm" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="gameScene" destination="Lx8-Pd-sBm" id="Kwi-T9-eeQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iit-KU-DAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4562" y="51"/>
+            <point key="canvasLocation" x="4560" y="50"/>
         </scene>
-        <!--End Level View Controller-->
+        <!--View Controller-->
         <scene sceneID="ETD-yS-rNq">
             <objects>
-                <viewController id="xbp-D5-Oej" customClass="EndLevelViewController" sceneMemberID="viewController">
+                <viewController id="xbp-D5-Oej" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t3a-oR-slm"/>
                         <viewControllerLayoutGuide type="bottom" id="Ppq-VS-BvJ"/>
@@ -251,12 +255,18 @@
                     <view key="view" contentMode="scaleToFill" id="Oer-Qz-kX0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz0-DS-OLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5268" y="51"/>
+            <point key="canvasLocation" x="5300" y="-245"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jlH-XA-2Cd">
@@ -269,7 +279,7 @@
                     <view key="view" contentMode="scaleToFill" id="cyX-rW-9ND">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="NU1-m6-SNe"/>
                 </viewController>
@@ -291,13 +301,13 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6j2-k7-ODe">
                                 <rect key="frame" x="30" y="40" width="540" height="540"/>
-                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6j2-k7-ODe" firstAttribute="top" secondItem="btp-eY-csz" secondAttribute="bottom" constant="20" id="EbP-65-vnX"/>
                             <constraint firstItem="clM-8O-Jcj" firstAttribute="top" secondItem="6j2-k7-ODe" secondAttribute="bottom" constant="20" id="hit-7L-gmC"/>
@@ -329,9 +339,66 @@
             </objects>
             <point key="canvasLocation" x="2982" y="51"/>
         </scene>
+        <!--Retry Level View Controller-->
+        <scene sceneID="zjn-3d-p08">
+            <objects>
+                <viewController id="tCy-0o-teG" customClass="RetryLevelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LgW-Xd-MCf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xyr-3C-jNB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eAC-hC-MFF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg-red" translatesAutoresizingMaskIntoConstraints="NO" id="qYp-HF-fTg">
+                                <rect key="frame" x="-56" y="-696" width="1033" height="1825"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="jl5-d6-Bfd">
+                                <rect key="frame" x="559" y="28" width="21" height="21"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You failed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-so-UMd">
+                                <rect key="frame" x="189" y="243" width="222" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="retry.png" translatesAutoresizingMaskIntoConstraints="NO" id="g0r-ed-Lnj">
+                                <rect key="frame" x="283" y="188" width="35" height="33"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-xB-Nb9">
+                                <rect key="frame" x="251" y="310" width="98" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-Y6-j9v">
+                                <rect key="frame" x="20" y="524" width="560" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Try again">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMl-ya-5wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5300" y="441"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bg-red" width="1033" height="1825"/>
+        <image name="cross.png" width="21" height="21"/>
         <image name="logo" width="156" height="156"/>
+        <image name="retry.png" width="35" height="33"/>
         <image name="settings-button" width="48" height="48"/>
         <image name="star" width="38" height="37"/>
     </resources>

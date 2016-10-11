@@ -7,37 +7,41 @@
 //
 
 import UIKit
-import SpriteKit
 
 class GameViewController: UIViewController {
 	
-	// Do any additional setup after loading the view, typically from a nib.
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		self.navigationController!.navigationBar.hidden = true;
-		let scene = GameScene(size: view.bounds.size)
-		let skView = view as! SKView
-		skView.showsFPS = true
-		skView.showsNodeCount = true
-		skView.ignoresSiblingOrder = true
-		scene.scaleMode = .ResizeFill
-		skView.presentScene(scene)
+	private var level = 5
+	
+	@IBOutlet var gameScene: GameScene! {
+		didSet {
+			let recognizer = UITapGestureRecognizer(target: self, action:#selector(initScene(_:)))
+			recognizer.addTarget(gameScene, action: #selector(GameScene.snapBall(_:)))
+			gameScene.addGestureRecognizer(recognizer)
+		}
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.navigationBarHidden = true
+	}
+
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		gameScene.animating = true
 	}
 	
-	override func shouldAutorotate() -> Bool {
-		return true
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		gameScene.animating = false
 	}
 	
-	override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-		if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-			return .AllButUpsideDown
-		} else {
-			return .All
+	func initScene(recognizer: UITapGestureRecognizer) {
+		if recognizer.state == .Ended {
+			gameScene.createBall()
+			gameScene.createExit()
+			for _ in 1...level {
+				gameScene.createObstacle()
+			}
 		}
 	}
 	

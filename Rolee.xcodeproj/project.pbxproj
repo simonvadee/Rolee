@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */; };
+		423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */; };
+		423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56231DA7B6F20039B7D3 /* BallBehavior.swift */; };
+		423A56261DA7B72D0039B7D3 /* ObstacleBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */; };
+		423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56271DA7B7430039B7D3 /* ExitBehavior.swift */; };
 		4252C1FB1DA6860800572594 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252C1FA1DA6860800572594 /* GameScene.swift */; };
 		4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB471DA02E7C00075ADA /* AppDelegate.swift */; };
 		4261CB4A1DA02E7C00075ADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB491DA02E7C00075ADA /* ViewController.swift */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathsView.swift; sourceTree = "<group>"; };
+		423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Extensions.swift"; sourceTree = "<group>"; };
+		423A56231DA7B6F20039B7D3 /* BallBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallBehavior.swift; sourceTree = "<group>"; };
+		423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObstacleBehavior.swift; sourceTree = "<group>"; };
+		423A56271DA7B7430039B7D3 /* ExitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitBehavior.swift; sourceTree = "<group>"; };
 		4252C1FA1DA6860800572594 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		4261CB441DA02E7C00075ADA /* Rolee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rolee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261CB471DA02E7C00075ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,9 +105,7 @@
 			children = (
 				4261CB471DA02E7C00075ADA /* AppDelegate.swift */,
 				4261CB491DA02E7C00075ADA /* ViewController.swift */,
-				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
 				42747A7B1DA165E40011E340 /* EndLevelViewController.swift */,
-				42747A791DA165590011E340 /* GameViewController.swift */,
 				42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */,
 				42E811761DA1151A0064BDF7 /* SettingsViewController.swift */,
 				42E811781DA115350064BDF7 /* LevelsViewController.swift */,
@@ -106,7 +114,14 @@
 				4261CB4E1DA02E7C00075ADA /* Assets.xcassets */,
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
+				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
+				42747A791DA165590011E340 /* GameViewController.swift */,
 				4252C1FA1DA6860800572594 /* GameScene.swift */,
+				423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */,
+				423A56231DA7B6F20039B7D3 /* BallBehavior.swift */,
+				423A56271DA7B7430039B7D3 /* ExitBehavior.swift */,
+				423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */,
+				421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */,
 			);
 			path = Rolee;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 		4261CB3C1DA02E7C00075ADA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "simon vadée";
@@ -222,15 +238,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4252C1FB1DA6860800572594 /* GameScene.swift in Sources */,
+				423A56261DA7B72D0039B7D3 /* ObstacleBehavior.swift in Sources */,
 				4261CB4A1DA02E7C00075ADA /* ViewController.swift in Sources */,
 				4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */,
 				42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */,
 				42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */,
 				42747A7C1DA165E40011E340 /* EndLevelViewController.swift in Sources */,
 				42747A7A1DA165590011E340 /* GameViewController.swift in Sources */,
+				423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */,
+				423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */,
 				42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */,
+				421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,
+				423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +372,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
