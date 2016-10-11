@@ -395,7 +395,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg-blue" width="1033" height="1825"/>
         <image name="bg-red" width="1033" height="1825"/>
         <image name="cross.png" width="21" height="21"/>
         <image name="logo" width="156" height="156"/>
