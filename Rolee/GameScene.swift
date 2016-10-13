@@ -14,9 +14,9 @@ class GameScene: UIView {
 	let manager = CMMotionManager()
 	
 	var snap: UISnapBehavior? = nil
-	private let ballBehavior = BallBehavior()
-	private let obstaclesBehavior = ObstacleBehavior()
-	private let exitBehavior = BallBehavior()
+	fileprivate let ballBehavior = BallBehavior()
+	fileprivate let obstaclesBehavior = ObstacleBehavior()
+	fileprivate let exitBehavior = BallBehavior()
 
 	lazy var collider: UICollisionBehavior? = nil
 	lazy var animator: UIDynamicAnimator? = nil
@@ -38,16 +38,16 @@ class GameScene: UIView {
 		}
 	}
 	
-	private var exitSize = CGSize(width: 100, height: 100)
-	private var ballRadius = CGFloat(50)
+	fileprivate var exitSize = CGSize(width: 100, height: 100)
+	fileprivate var ballRadius = CGFloat(50)
 
-	private var obstacleSize: CGSize {
+	fileprivate var obstacleSize: CGSize {
 		let x = CGFloat.random(50, max: 100)
 		let y = CGFloat.random(50, max: 100)
 		return CGSize(width: x, height: y)
 	}
 	
-	private var obstacleOrigin : CGPoint {
+	fileprivate var obstacleOrigin : CGPoint {
 		return CGPoint(x: CGFloat.random(50, max: bounds.size.width - exitSize.width), y: CGFloat.random(50, max: bounds.size.height - exitSize.height))
 	}
 	
@@ -65,7 +65,7 @@ class GameScene: UIView {
 		let frame = CGRect(origin: CGPoint.zero, size: obstacleSize)
 
 		let ball = UIView(frame: frame)
-		ball.backgroundColor = UIColor.redColor()
+		ball.backgroundColor = UIColor.red
 		
 		addSubview(ball)
 		collider!.addItem(ball)
@@ -78,15 +78,15 @@ class GameScene: UIView {
 		frame.origin.x -= exitSize.width
 		frame.origin.y -= exitSize.height
 		let exit = UIView(frame: frame)
-		exit.backgroundColor = UIColor.blackColor()
+		exit.backgroundColor = UIColor.black
 		
 		addSubview(exit)
 		collider!.addItem(exit)
 		exitBehavior.addItem(exit)
 	}
 	
-	func snapBall(recognizer: UITapGestureRecognizer) {
-		ballBehavior.snapBall(recognizer.locationInView(self))
+	func snapBall(_ recognizer: UITapGestureRecognizer) {
+		ballBehavior.snapBall(recognizer.location(in: self))
 	}
 	
 }

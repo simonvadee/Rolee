@@ -124,7 +124,6 @@
 				42E811721DA110D10064BDF7 /* HomeViewController.swift */,
 				42E811701DA10F780064BDF7 /* StartViewController.swift */,
 				4261CB4E1DA02E7C00075ADA /* Assets.xcassets */,
-				A0EEBBE61DAEBFF900E907D8 /* 0957.aiff */,
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
@@ -136,7 +135,6 @@
 				423A56271DA7B7430039B7D3 /* ExitBehavior.swift */,
 				423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */,
 				421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */,
-				A0EEBBE41DAEBC6F00E907D8 /* AudioToolbox Extensions.swift */,
 			);
 			path = Rolee;
 			sourceTree = "<group>";
@@ -196,12 +194,13 @@
 			attributes = {
 				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "simon vadée";
 				TargetAttributes = {
 					4261CB431DA02E7C00075ADA = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9Z69644A6V;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -213,6 +212,7 @@
 					};
 					4261CB571DA02E7C00075ADA = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4261CB431DA02E7C00075ADA;
 					};
 				};
@@ -243,7 +243,6 @@
 			files = (
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
-				A0EEBBE71DAEBFF900E907D8 /* 0957.aiff in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +275,6 @@
 				42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */,
 				421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
-				A0EEBBE51DAEBC6F00E907D8 /* AudioToolbox Extensions.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,
 				423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */,
 			);
@@ -334,8 +332,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -380,8 +380,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -401,6 +403,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -416,6 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rolee.Rolee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -430,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rolee.Rolee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -442,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "simon-vade-e.RoleeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rolee.app/Rolee";
 			};
 			name = Debug;
@@ -454,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "simon-vade-e.RoleeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rolee.app/Rolee";
 			};
 			name = Release;

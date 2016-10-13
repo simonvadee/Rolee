@@ -10,7 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 	
-	private var level = 5
+	fileprivate var level = 5
 
 	var collider: UICollisionBehavior!
 	
@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.navigationController?.navigationBarHidden = true
+		self.navigationController?.isNavigationBarHidden = true
 
 		self.animator = UIDynamicAnimator(referenceView: gameScene)
 		self.animator.delegate = self
@@ -39,20 +39,20 @@ class GameViewController: UIViewController {
 		self.animator.addBehavior(collider)
 	}
 
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		gameScene.collider = self.collider
 		gameScene.animator = self.animator
 		gameScene.animating = true
 	}
 	
-	override func viewWillDisappear(animated: Bool) {
+	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		gameScene.animating = false
 	}
 	
-	func initScene(recognizer: UITapGestureRecognizer) {
-		if recognizer.state == .Ended {
+	func initScene(_ recognizer: UITapGestureRecognizer) {
+		if recognizer.state == .ended {
 			gameScene.createBall()
 			gameScene.createExit()
 			for _ in 1...level {
@@ -66,11 +66,11 @@ class GameViewController: UIViewController {
 
 extension GameViewController : UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate {
 	
-	func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+	func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
 		print("pause")
 	}
 	
-	func dynamicAnimatorWillResume(animator: UIDynamicAnimator) {
+	func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {
 		print("resume")
 	}
 	
@@ -78,20 +78,20 @@ extension GameViewController : UIDynamicAnimatorDelegate, UICollisionBehaviorDel
 		print("lol")
 	}
 	
-	func collisionBehavior(behavior: UICollisionBehavior,
-	                       beganContactForItem item: UIDynamicItem,
+	func collisionBehavior(_ behavior: UICollisionBehavior,
+	                       beganContactFor item: UIDynamicItem,
 	                                           withBoundaryIdentifier identifier: NSCopying?,
-	                                                                  atPoint p: CGPoint) {
+	                                                                  at p: CGPoint) {
 		print(p)
 		// look for the dynamic item behavior
 		let b = self.animator.behaviors
-		if let ix = b.indexOf({$0 is UIDynamicItemBehavior}) {
+		if let ix = b.index(where: {$0 is UIDynamicItemBehavior}) {
 			let bounce = b[ix] as! UIDynamicItemBehavior
-			let v = bounce.angularVelocityForItem(item)
+			let v = bounce.angularVelocity(for: item)
 			print(v)
 			if v <= 6 {
 				print("adding angular velocity")
-				bounce.addAngularVelocity(6, forItem:item)
+				bounce.addAngularVelocity(6, for:item)
 			}
 		}
 	}

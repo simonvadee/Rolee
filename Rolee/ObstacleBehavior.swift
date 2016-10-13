@@ -10,8 +10,8 @@ import UIKit
 
 class ObstacleBehavior: UIDynamicBehavior {
 
-	private let continuousPush: UIPushBehavior = {
-		let push = UIPushBehavior(items: [], mode: .Continuous)
+	fileprivate let continuousPush: UIPushBehavior = {
+		let push = UIPushBehavior(items: [], mode: .continuous)
 		push.setAngle( CGFloat(M_PI_2), magnitude: 10)
 		push.action = {
 			push.angle =  -push.angle
@@ -25,7 +25,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 		}
 	}
 	
-	private let itemBehavior : UIDynamicItemBehavior = {
+	fileprivate let itemBehavior : UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
 		behavior.elasticity = 1
 		behavior.allowsRotation = true
@@ -38,12 +38,12 @@ class ObstacleBehavior: UIDynamicBehavior {
 		addChildBehavior(continuousPush)
 	}
 	
-	func addItem(item: UIDynamicItem) {
+	func addItem(_ item: UIDynamicItem) {
 		itemBehavior.addItem(item)
 		continuousPush.addItem(item)
 	}
 	
-	func removeItem(item: UIDynamicItem) {
+	func removeItem(_ item: UIDynamicItem) {
 		itemBehavior.removeItem(item)
 		continuousPush.removeItem(item)
 	}

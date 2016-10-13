@@ -20,10 +20,10 @@ class ExitBehavior: UIDynamicBehavior {
 		super.init()
 	}
 	
-	func addItem(item: UIDynamicItem) {
+	func addItem(_ item: UIDynamicItem) {
 	}
 	
-	func removeItem(item: UIDynamicItem) {
+	func removeItem(_ item: UIDynamicItem) {
 	}
 
 }
