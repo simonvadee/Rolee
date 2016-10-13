@@ -113,7 +113,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="GRV-Vk-ANY">
-                                                <rect key="frame" x="28" y="91" width="38" height="37"/>
+                                                <rect key="frame" x="28" y="91" width="44" height="43"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sG-92-cBP">
                                                 <rect key="frame" x="469" y="98" width="50" height="24"/>
@@ -256,7 +256,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -380,11 +380,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg-red" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-XP-lJd">
-                                <rect key="frame" x="-336" y="-794" width="1033" height="1825"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg-red" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-jg-u9h">
+                                <rect key="frame" x="-167" y="-383" width="1033" height="1825"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-Y6-j9v">
-                                <rect key="frame" x="20" y="524" width="560" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You failed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-so-UMd">
+                                <rect key="frame" x="20" y="28" width="560" height="472"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="pOx-gR-r9b">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="retry" translatesAutoresizingMaskIntoConstraints="NO" id="861-rT-Oqy">
+                                <rect key="frame" x="20" y="20" width="560" height="380"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-xB-Nb9">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-Y6-j9v">
+                                <rect key="frame" x="20" y="545" width="560" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Try again">
@@ -396,24 +414,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You failed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-so-UMd">
-                                <rect key="frame" x="20" y="28" width="560" height="472"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-xB-Nb9">
-                                <rect key="frame" x="20" y="28" width="560" height="564"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="pOx-gR-r9b">
-                                <rect key="frame" x="20" y="28" width="560" height="21"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="retry" translatesAutoresizingMaskIntoConstraints="NO" id="861-rT-Oqy">
-                                <rect key="frame" x="20" y="20" width="560" height="380"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -422,6 +422,7 @@
                             <constraint firstItem="pOx-gR-r9b" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="93N-fd-My1"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="3qh-xB-Nb9" secondAttribute="bottom" constant="261" id="9Dg-nT-Liv"/>
                             <constraint firstItem="861-rT-Oqy" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" id="D3c-v4-6e3"/>
+                            <constraint firstItem="qFF-Y6-j9v" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="DBe-QD-qZn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="861-rT-Oqy" secondAttribute="trailing" id="GmV-8h-Qa6"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="XoI-so-UMd" secondAttribute="bottom" constant="100" id="HRr-EN-oio"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qFF-Y6-j9v" secondAttribute="leading" id="Hdb-qD-vgV"/>
@@ -431,6 +432,7 @@
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="861-rT-Oqy" secondAttribute="bottom" constant="200" id="Pa8-Cw-rJs"/>
                             <constraint firstItem="XoI-so-UMd" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="R1j-Vu-MNE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XoI-so-UMd" secondAttribute="trailing" id="Vbd-VZ-rVE"/>
+                            <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="qFF-Y6-j9v" secondAttribute="bottom" constant="8" symbolic="YES" id="dXA-a2-Mgn"/>
                             <constraint firstItem="3qh-xB-Nb9" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="ft1-JU-x04"/>
                             <constraint firstItem="pOx-gR-r9b" firstAttribute="leading" secondItem="eAC-hC-MFF" secondAttribute="leadingMargin" id="iDw-JZ-btw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qFF-Y6-j9v" secondAttribute="trailing" id="kEL-xk-eqT"/>
@@ -441,9 +443,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DBe-QD-qZn"/>
                                 <exclude reference="Hdb-qD-vgV"/>
                                 <exclude reference="uN0-eI-ENV"/>
                                 <exclude reference="9Dg-nT-Liv"/>
+                                <exclude reference="Oug-hv-aAb"/>
                             </mask>
                         </variation>
                     </view>
@@ -481,11 +485,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg-blue" width="1033" height="1825"/>
         <image name="bg-red" width="1033" height="1825"/>
         <image name="cross" width="21" height="21"/>
         <image name="logo" width="156" height="156"/>
         <image name="retry" width="35" height="33"/>
         <image name="settings-button" width="48" height="48"/>
-        <image name="star" width="38" height="37"/>
+        <image name="star" width="44" height="43"/>
     </resources>
 </document>

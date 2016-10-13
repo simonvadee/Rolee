@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class StartViewController: UIViewController {
 	
@@ -24,6 +25,7 @@ class StartViewController: UIViewController {
 
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        SystemSoundID.playFileNamed("0957")
 		print("before segue")
 	}
 }
