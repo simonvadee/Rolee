@@ -28,6 +28,8 @@
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811781DA115350064BDF7 /* LevelsViewController.swift */; };
+		A0EEBBE51DAEBC6F00E907D8 /* AudioToolbox Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EEBBE41DAEBC6F00E907D8 /* AudioToolbox Extensions.swift */; };
+		A0EEBBE71DAEBFF900E907D8 /* 0957.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A0EEBBE61DAEBFF900E907D8 /* 0957.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		42E811781DA115350064BDF7 /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		A0EEBBE41DAEBC6F00E907D8 /* AudioToolbox Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioToolbox Extensions.swift"; sourceTree = "<group>"; };
+		A0EEBBE61DAEBFF900E907D8 /* 0957.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = 0957.aiff; path = ../../../Downloads/0957.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				42E811721DA110D10064BDF7 /* HomeViewController.swift */,
 				42E811701DA10F780064BDF7 /* StartViewController.swift */,
 				4261CB4E1DA02E7C00075ADA /* Assets.xcassets */,
+				A0EEBBE61DAEBFF900E907D8 /* 0957.aiff */,
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
@@ -132,6 +137,7 @@
 				423A56271DA7B7430039B7D3 /* ExitBehavior.swift */,
 				423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */,
 				421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */,
+				A0EEBBE41DAEBC6F00E907D8 /* AudioToolbox Extensions.swift */,
 			);
 			path = Rolee;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			files = (
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
+				A0EEBBE71DAEBFF900E907D8 /* 0957.aiff in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +276,7 @@
 				42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */,
 				421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
+				A0EEBBE51DAEBC6F00E907D8 /* AudioToolbox Extensions.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,
 				423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */,
 			);
