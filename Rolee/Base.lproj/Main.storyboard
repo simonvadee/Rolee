@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -220,6 +220,8 @@
                     </view>
                     <connections>
                         <outlet property="gameScene" destination="Lx8-Pd-sBm" id="Kwi-T9-eeQ"/>
+                        <segue destination="xbp-D5-Oej" kind="show" identifier="winSegue" id="rcx-oE-9ni"/>
+                        <segue destination="tCy-0o-teG" kind="show" identifier="loseSegue" id="bFH-MI-SDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iit-KU-DAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,7 +275,7 @@
         <!--Leaderboard-->
         <scene sceneID="2Uv-MW-L7A">
             <objects>
-                <tableViewController storyboardIdentifier="Leaderboard table" id="db6-mD-ZNU" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Leaderboard table" id="db6-mD-ZNU" customClass="LeaderboardViewController" customModule="Rolee" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="4qy-zA-fnO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,7 +285,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ab-z0-eck" id="oqT-eg-GBc">
-                                    <frame key="frameInset" width="375" height="60"/>
+                                    <frame key="frameInset" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="265-8H-YBC">
@@ -387,6 +389,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ty6-xM-lQm" kind="show" id="8KM-42-udP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -443,7 +448,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="srr-5g-XRi" id="cJ9-Pi-bNj">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -467,4 +472,7 @@
         <image name="settings-button" width="48" height="48"/>
         <image name="star" width="44" height="43"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="B9r-Gk-4sf"/>
+    </inferredMetricsTieBreakers>
 </document>

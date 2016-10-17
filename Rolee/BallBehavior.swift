@@ -11,7 +11,7 @@ import UIKit
 class BallBehavior: UIDynamicBehavior {
 
 	private var ball: UIView? = nil
-	fileprivate var snap: UISnapBehavior? {
+	private var snap: UISnapBehavior? {
 		didSet {
 			addChildBehavior(snap!)
 		}
@@ -25,6 +25,7 @@ class BallBehavior: UIDynamicBehavior {
 	
 	func addItem(_ item: UIDynamicItem) {
 		ball = item as? UIView
+		snap = UISnapBehavior(item: ball!, snapTo: CGPoint(x: 0, y: 0))
 	}
 	
 	func removeItem(_ item: UIDynamicItem) {

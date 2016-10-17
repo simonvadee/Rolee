@@ -35,7 +35,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 	override init() {
 		super.init()
 		addChildBehavior(itemBehavior)
-		addChildBehavior(continuousPush)
+//		addChildBehavior(continuousPush)
 	}
 	
 	func addItem(_ item: UIDynamicItem) {

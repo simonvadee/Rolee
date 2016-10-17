@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeaderboardViewController: UIViewController {
+class LeaderboardViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -16,6 +16,10 @@ class LeaderboardViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.isNavigationBarHidden = false
+	}
+
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.

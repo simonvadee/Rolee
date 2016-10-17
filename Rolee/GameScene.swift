@@ -16,7 +16,7 @@ class GameScene: UIView {
 	private var itemTag = 1
 	private let ballBehavior = BallBehavior()
 	private let obstaclesBehavior = ObstacleBehavior()
-	private let exitBehavior = BallBehavior()
+	private let exitBehavior = ExitBehavior()
 
 	lazy var collider: UICollisionBehavior? = nil
 	lazy var animator: UIDynamicAnimator? = nil
@@ -39,11 +39,11 @@ class GameScene: UIView {
 	}
 	
 	fileprivate var exitSize = CGSize(width: 100, height: 100)
-	fileprivate var ballRadius = CGFloat(50)
+	fileprivate var ballRadius = CGFloat(30)
 
 	fileprivate var obstacleSize: CGSize {
-		let x = CGFloat.random(50, max: 100)
-		let y = CGFloat.random(50, max: 100)
+		let x = CGFloat.random(50, max: 70)
+		let y = CGFloat.random(50, max: 70)
 		return CGSize(width: x, height: y)
 	}
 	

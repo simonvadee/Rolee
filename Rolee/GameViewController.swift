@@ -21,8 +21,11 @@ class GameViewController: UIViewController {
 	var animator: UIDynamicAnimator!
 
 
-	@IBOutlet var gameScene: GameScene! {
+	@IBOutlet weak var gameScene: GameScene! {
 		didSet {
+			let recognizer = UITapGestureRecognizer(target: gameScene, action:#selector(GameScene.snapBall(_:)))
+			gameScene.addGestureRecognizer(recognizer)
+
 			self.animator = UIDynamicAnimator(referenceView: gameScene)
 			self.animator.delegate = self
 			
@@ -41,9 +44,6 @@ class GameViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		let recognizer = UITapGestureRecognizer(target: gameScene, action:#selector(GameScene.snapBall(_:)))
-		gameScene.addGestureRecognizer(recognizer)
 		
 		self.navigationController?.isNavigationBarHidden = true
 		
@@ -84,10 +84,12 @@ extension GameViewController : UIDynamicAnimatorDelegate, UICollisionBehaviorDel
 		switch (firstItem, secondItem) {
 		// collision between ball and exit
 			case (0, -1):
+				performSegue(withIdentifier: "winSegue", sender: self)
 				print("win")
 				
 		// collision between ball and obstacle
 			case (0, _):
+				performSegue(withIdentifier: "loseSegue", sender: self)
 				print("lose")
 		// collision between obstacles and/or exit
 			default:
