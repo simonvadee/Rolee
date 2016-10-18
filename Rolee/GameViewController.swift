@@ -130,7 +130,7 @@ class GameViewController: UIViewController {
 	}
 	
 	func initScene() {
-		gameScene.createBall()
+        gameScene.createBall()
 		gameScene.createExit()
 		for _ in 1...level {
 			gameScene.createObstacle()
