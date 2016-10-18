@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04D8897A1DB627130022F7EF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D889791DB627130022F7EF /* CoreMotion.framework */; };
-		04D8897C1DB627210022F7EF /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8897B1DB627210022F7EF /* SpriteKit.framework */; };
 		421781511DA7F29300ECF99E /* NamedBezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */; };
 		421CA6341DAEC83C007FAB26 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421CA6331DAEC83C007FAB26 /* GameKit.framework */; };
 		421DC7461DAE77A500C5B11B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421DC7451DAE77A500C5B11B /* CloudKit.framework */; };
@@ -45,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		04D889791DB627130022F7EF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		04D8897B1DB627210022F7EF /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		421781501DA7F29300ECF99E /* NamedBezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathsView.swift; sourceTree = "<group>"; };
 		421CA6331DAEC83C007FAB26 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		421DC7441DAE75D500C5B11B /* Rolee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rolee.entitlements; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D8897C1DB627210022F7EF /* SpriteKit.framework in Frameworks */,
 				04D8897A1DB627130022F7EF /* CoreMotion.framework in Frameworks */,
 				421DC7461DAE77A500C5B11B /* CloudKit.framework in Frameworks */,
 				421CA6341DAEC83C007FAB26 /* GameKit.framework in Frameworks */,
@@ -102,7 +99,6 @@
 			children = (
 				421CA6331DAEC83C007FAB26 /* GameKit.framework */,
 				421DC7451DAE77A500C5B11B /* CloudKit.framework */,
-				04D8897B1DB627210022F7EF /* SpriteKit.framework */,
 				04D889791DB627130022F7EF /* CoreMotion.framework */,
 			);
 			name = Frameworks;

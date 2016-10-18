@@ -8,6 +8,7 @@
 
 
 import UIKit
+import CoreMotion
 
 class GameScene: UIView {
 	
@@ -62,19 +63,17 @@ class GameScene: UIView {
 		obstaclesBehavior.addItem(obstacle)
 	}
 	
-	func createBall() {
-		let frame = CGRect(origin: CGPoint.zero, size: ballSize)
-
-		let ball = UIView(frame: frame)
-		ball.tag = 0
-		ball.backgroundColor = UIColor.red
-		
-		addSubview(ball)
-		collider!.addItem(ball)
-		ballBehavior.addItem(ball)
-	}
-    
-    
+    func createBall() {
+        let frame = CGRect(origin: CGPoint.zero, size: ballSize)
+        
+        let ball = UIView(frame: frame)
+        ball.tag = 0
+        ball.backgroundColor = UIColor.red
+        
+        addSubview(ball)
+        collider!.addItem(ball)
+        ballBehavior.addItem(ball)
+    }
 
 	func createExit() {
 		var frame = CGRect(origin: bounds.lowerRight, size: exitSize)

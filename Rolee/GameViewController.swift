@@ -8,11 +8,14 @@
 
 import UIKit
 import CloudKit
+import MapKit
+import CoreLocation
 import CoreMotion
+
 
 class GameViewController: UIViewController {
     
-    let motionManager = CMMotionManager()
+    var motionManager = CMMotionManager()
 	
 	private var level = 5
 	
@@ -23,6 +26,7 @@ class GameViewController: UIViewController {
 	private var collider: UICollisionBehavior!
 	var animator: UIDynamicAnimator!
 
+    @IBOutlet var ball: UIButton!
 
 	@IBOutlet weak var gameScene: GameScene! {
 		didSet {
@@ -58,6 +62,66 @@ class GameViewController: UIViewController {
 				case .noAccount: print("noAccount")
 			}
 		}
+        
+        motionManager.accelerometerUpdateInterval = 0.03
+        
+        //Start Recording Data
+        
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
+            
+            self.movePlayer(acceleration: accelerometerData!.acceleration)
+            if(NSError != nil) {
+                print("\(NSError)")
+            }
+        }
+    }
+    
+    func movePlayer(acceleration: CMAcceleration){
+
+        //Positive horizontal movement
+        if(acceleration.x > 0.1) {
+            ball.center.x += 2
+            if(acceleration.x > 0.3) {
+                ball.center.x += 4
+                if (acceleration.x > 0.6) {
+                    ball.center.x += 6
+                }
+            }
+        }
+        
+        //Negative horizontal movement
+        if(acceleration.x < -0.1) {
+            ball.center.x -= 2
+            if(acceleration.x < -0.3) {
+                ball.center.x -= 4
+                if (acceleration.x < -0.6) {
+                    ball.center.x -= 6
+                }
+            }
+        }
+        
+        //Positive vertical movement
+        if(acceleration.y < -0.1) {
+            ball.center.y += 2
+            if(acceleration.y < -0.3) {
+                ball.center.y += 4
+                if (acceleration.y < -0.6) {
+                    ball.center.y += 6
+                }
+            }
+        }
+        
+        //Negative vertical movement
+        if(acceleration.y > 0.1) {
+            ball.center.y -= 2
+            if(acceleration.y > 0.3) {
+                ball.center.y -= 4
+                if (acceleration.y > 0.6) {
+                    ball.center.y -= 6
+                }
+            }
+        }
+        
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
