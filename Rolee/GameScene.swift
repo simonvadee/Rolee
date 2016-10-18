@@ -6,12 +6,10 @@
 //  Copyright © 2016 simon vadée. All rights reserved.
 //
 
-import CoreMotion
+
 import UIKit
 
 class GameScene: UIView {
- 
-	let manager = CMMotionManager()
 	
 	private var itemTag = 1
 	private let ballBehavior = BallBehavior()
@@ -40,6 +38,7 @@ class GameScene: UIView {
 	
 	fileprivate var exitSize = CGSize(width: 100, height: 100)
 	fileprivate var ballRadius = CGFloat(30)
+    fileprivate var ballSize = CGSize(width: 30, height: 30)
 
 	fileprivate var obstacleSize: CGSize {
 		let x = CGFloat.random(50, max: 70)
@@ -64,7 +63,7 @@ class GameScene: UIView {
 	}
 	
 	func createBall() {
-		let frame = CGRect(origin: CGPoint.zero, size: obstacleSize)
+		let frame = CGRect(origin: CGPoint.zero, size: ballSize)
 
 		let ball = UIView(frame: frame)
 		ball.tag = 0
@@ -74,6 +73,8 @@ class GameScene: UIView {
 		collider!.addItem(ball)
 		ballBehavior.addItem(ball)
 	}
+    
+    
 
 	func createExit() {
 		var frame = CGRect(origin: bounds.lowerRight, size: exitSize)

@@ -8,8 +8,11 @@
 
 import UIKit
 import CloudKit
+import CoreMotion
 
 class GameViewController: UIViewController {
+    
+    let motionManager = CMMotionManager()
 	
 	private var level = 5
 	
