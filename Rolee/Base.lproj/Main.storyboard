@@ -220,18 +220,18 @@
                     </view>
                     <connections>
                         <outlet property="gameScene" destination="Lx8-Pd-sBm" id="Kwi-T9-eeQ"/>
-                        <segue destination="xbp-D5-Oej" kind="show" identifier="winSegue" id="rcx-oE-9ni"/>
-                        <segue destination="tCy-0o-teG" kind="show" identifier="loseSegue" id="bFH-MI-SDu"/>
+                        <segue destination="xbp-D5-Oej" kind="show" identifier="winSegue" id="rJJ-jb-mvG"/>
+                        <segue destination="tCy-0o-teG" kind="show" identifier="loseSegue" id="vLK-35-7GQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iit-KU-DAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4560" y="50"/>
         </scene>
-        <!--View Controller-->
+        <!--End Level View Controller-->
         <scene sceneID="ETD-yS-rNq">
             <objects>
-                <viewController id="xbp-D5-Oej" sceneMemberID="viewController">
+                <viewController id="xbp-D5-Oej" customClass="EndLevelViewController" customModule="Rolee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t3a-oR-slm"/>
                         <viewControllerLayoutGuide type="bottom" id="Ppq-VS-BvJ"/>
@@ -239,13 +239,6 @@
                     <view key="view" contentMode="scaleToFill" id="Oer-Qz-kX0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Vb-bAw" customClass="GameScene" customModule="Rolee" customModuleProvider="target">
-                                <frame key="frameInset" width="600" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
@@ -282,7 +275,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HighscoreTableViewCell" rowHeight="60" id="8ab-z0-eck" customClass="HighscoreTableViewCell" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ab-z0-eck" id="oqT-eg-GBc">
                                     <frame key="frameInset" width="375" height="59"/>
@@ -350,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="2982" y="51"/>
         </scene>
-        <!--Retry Level View Controller-->
+        <!--End Level View Controller-->
         <scene sceneID="zjn-3d-p08">
             <objects>
-                <viewController id="tCy-0o-teG" customClass="RetryLevelViewController" sceneMemberID="viewController">
+                <viewController id="tCy-0o-teG" customClass="EndLevelViewController" customModule="Rolee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LgW-Xd-MCf"/>
                         <viewControllerLayoutGuide type="bottom" id="Xyr-3C-jNB"/>
@@ -390,7 +383,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ty6-xM-lQm" kind="show" id="8KM-42-udP"/>
+                                    <action selector="tryAgain:" destination="tCy-0o-teG" eventType="touchUpInside" id="BYs-2Z-r44"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -472,7 +465,4 @@
         <image name="settings-button" width="48" height="48"/>
         <image name="star" width="44" height="43"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="B9r-Gk-4sf"/>
-    </inferredMetricsTieBreakers>
 </document>

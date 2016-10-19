@@ -11,26 +11,35 @@ import UIKit
 class BallBehavior: UIDynamicBehavior {
 
 	private var ball: UIView? = nil
-	private var snap: UISnapBehavior? {
+	private var snap: UISnapBehavior! {
 		didSet {
-			addChildBehavior(snap!)
+			snap.damping = 1
+			addChildBehavior(snap)
 		}
 	}
+		
+	private let customBehavior: UIDynamicItemBehavior = {
+		let behavior = UIDynamicItemBehavior()
+		behavior.allowsRotation = false
+		return behavior
+	}()
 	
-	var collider: UICollisionBehavior? {
-		didSet {
-			addChildBehavior(collider!)
-		}
+	override init() {
+		super.init()
+		addChildBehavior(customBehavior)
 	}
-	
+
 	func addItem(_ item: UIDynamicItem) {
 		ball = item as? UIView
-		snap = UISnapBehavior(item: ball!, snapTo: CGPoint(x: 0, y: 0))
+		customBehavior.addItem(ball!)
+		snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
 	}
 	
 	func removeItem(_ item: UIDynamicItem) {
-		ball = nil
-		removeItem(item)
+		customBehavior.removeItem(ball!)
+		if (snap != nil) {
+			removeChildBehavior(snap!)
+		}
 	}
 	
 	func snapBall(_ dest: CGPoint) {
