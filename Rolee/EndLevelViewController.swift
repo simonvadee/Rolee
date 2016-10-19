@@ -17,13 +17,18 @@ class EndLevelViewController: UIViewController {
 		
 		if score > 0 {
 			print("::::::::::::::::: score --> \(score)")
-			_ = navigationController?.popViewController(animated: true)
 		}
 		else {
-			GameViewController.level = 0
+			GameViewController.level = 1
 		}
 		print("\(navigationController?.viewControllers)")
 		// Do any additional setup after loading the view, typically from a nib.
+	}
+	
+	@IBAction func nextLevel(_ sender: UIButton) {
+		GameViewController.level += 1
+
+		_ = navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func tryAgain(_ sender: UIButton) {

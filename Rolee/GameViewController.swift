@@ -11,7 +11,7 @@ import CloudKit
 
 class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	
-	static var level = 0
+	static var level = 1
 	
 	private var recognizer: UITapGestureRecognizer!
 	
@@ -60,8 +60,6 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		gameScene.addGestureRecognizer(self.recognizer)
-
-		GameViewController.level += 1
 		
 		addBehaviorToAnimator(collider)
 		gameScene.initScene()
