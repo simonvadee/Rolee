@@ -39,14 +39,16 @@ class GameScene: UIView {
 		}
 	}
 	
-	fileprivate var exitSize = CGSize(width: 100, height: 100)
+	fileprivate var exitSize = CGSize(width: 80, height: 80)
+    fileprivate var ballSize = CGSize(width: 60, height: 60)
 	fileprivate var ballRadius = CGFloat(30)
 
-	fileprivate var obstacleSize: CGSize {
-		let x = CGFloat.random(50, max: 70)
+    fileprivate var obstacleSize: CGSize {
+        let x = CGFloat.random(50, max: 70)
 		let y = CGFloat.random(50, max: 70)
 		return CGSize(width: x, height: y)
-	}
+    }
+	
 	
 	fileprivate var obstacleOrigin : CGPoint {
 		return CGPoint(x: CGFloat.random(50, max: bounds.size.width - exitSize.width), y: CGFloat.random(50, max: bounds.size.height - exitSize.height))
@@ -75,7 +77,8 @@ class GameScene: UIView {
 		let obstacle = UIView(frame: frame)
 		obstacle.tag = itemTag
 		itemTag += 1
-		obstacle.backgroundColor = UIColor.random
+        
+		obstacle.backgroundColor = UIColor(patternImage: UIImage(named: "obstacle-1.png")!)
 		
 		addSubview(obstacle)
 		delegate?.addItemToCollider(obstacle)
@@ -83,11 +86,11 @@ class GameScene: UIView {
 	}
 	
 	func createBall() {
-		let frame = CGRect(origin: CGPoint.zero, size: obstacleSize)
+		let frame = CGRect(origin: CGPoint.zero, size: ballSize)
 
 		self.ball = UIView(frame: frame)
 		ball.tag = 0
-		ball.backgroundColor = UIColor.red
+		ball.backgroundColor = UIColor(patternImage: UIImage(named: "ball.png")!)
 		
 		addSubview(ball)
 		delegate?.addItemToCollider(ball)
@@ -101,7 +104,7 @@ class GameScene: UIView {
 		frame.origin.y -= exitSize.height
 		self.exit = UIView(frame: frame)
 		exit.tag = -1
-		exit.backgroundColor = UIColor.black
+		exit.backgroundColor = UIColor(patternImage: UIImage(named: "safe-space.png")!)
 		
 		addSubview(exit)
 		delegate?.addItemToCollider(exit)

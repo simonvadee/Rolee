@@ -10,6 +10,7 @@ import UIKit
 import CloudKit
 
 class GameViewController: UIViewController, UICollisionBehaviorDelegate {
+    
 	
 	static var level = 1
 	
@@ -58,6 +59,7 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 		super.viewWillAppear(animated)
 		gameScene.addGestureRecognizer(self.recognizer)
 		
