@@ -335,7 +335,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6BU-oh-g9N" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY8-GU-y2y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RY8-GU-y2y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
