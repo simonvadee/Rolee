@@ -10,12 +10,6 @@ import UIKit
 
 class ExitBehavior: UIDynamicBehavior {
 
-	var collider: UICollisionBehavior? {
-		didSet {
-			addChildBehavior(collider!)
-		}
-	}
-	
 	override init() {
 		super.init()
 	}

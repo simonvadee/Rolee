@@ -10,22 +10,18 @@ import UIKit
 
 class ObstacleBehavior: UIDynamicBehavior {
 
-	fileprivate let continuousPush: UIPushBehavior = {
+	private var items: [UIDynamicItem] = []
+	
+	private let continuousPush: UIPushBehavior = {
 		let push = UIPushBehavior(items: [], mode: .continuous)
-		push.setAngle( CGFloat(M_PI_2), magnitude: 10)
+		push.setAngle( CGFloat(M_PI_2), magnitude: 1)
 		push.action = {
 			push.angle =  -push.angle
 		}
 		return push
 	}()
-	
-	var collider: UICollisionBehavior? {
-		didSet {
-			addChildBehavior(collider!)
-		}
-	}
-	
-	fileprivate let itemBehavior : UIDynamicItemBehavior = {
+		
+	private let itemBehavior : UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
 		behavior.elasticity = 1
 		behavior.allowsRotation = true
@@ -35,17 +31,21 @@ class ObstacleBehavior: UIDynamicBehavior {
 	override init() {
 		super.init()
 		addChildBehavior(itemBehavior)
-		addChildBehavior(continuousPush)
+//		addChildBehavior(continuousPush)
 	}
 	
 	func addItem(_ item: UIDynamicItem) {
 		itemBehavior.addItem(item)
 		continuousPush.addItem(item)
+		items.append(item)
 	}
 	
-	func removeItem(_ item: UIDynamicItem) {
-		itemBehavior.removeItem(item)
-		continuousPush.removeItem(item)
+	func removeItems() {
+		for item in items {
+			itemBehavior.removeItem(item)
+			continuousPush.removeItem(item)
+		}
+		items.removeAll()
 	}
 
 }

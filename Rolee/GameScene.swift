@@ -13,62 +13,84 @@ class GameScene: UIView {
  
 	let manager = CMMotionManager()
 	
-	var snap: UISnapBehavior? = nil
-	fileprivate let ballBehavior = BallBehavior()
-	fileprivate let obstaclesBehavior = ObstacleBehavior()
-	fileprivate let exitBehavior = BallBehavior()
+	private var ball: UIView!
+	private var exit: UIView!
+	
+	private var itemTag = 1
+	private let ballBehavior = BallBehavior()
+	private let obstaclesBehavior = ObstacleBehavior()
+	private let exitBehavior = ExitBehavior()
 
-	lazy var collider: UICollisionBehavior? = nil
+	var delegate: GameSceneDelegate?
 	lazy var animator: UIDynamicAnimator? = nil
 	
 	var animating: Bool = false {
 		didSet {
 			if animating {
-				animator!.addBehavior(ballBehavior)
-				animator!.addBehavior(obstaclesBehavior)
-				animator!.addBehavior(exitBehavior)
-				animator!.addBehavior(collider!)
+				delegate?.addBehaviorToAnimator(ballBehavior)
+				delegate?.addBehaviorToAnimator(obstaclesBehavior)
+				delegate?.addBehaviorToAnimator(exitBehavior)
 			}
-			else { 
-				animator!.removeBehavior(ballBehavior)
-				animator!.removeBehavior(obstaclesBehavior)
-				animator!.removeBehavior(exitBehavior)
-				animator!.removeBehavior(collider!)
+			else {
+				delegate?.removeBehaviorFromAnimator(ballBehavior)
+				delegate?.removeBehaviorFromAnimator(obstaclesBehavior)
+				delegate?.removeBehaviorFromAnimator(exitBehavior)
 			}
 		}
 	}
 	
 	fileprivate var exitSize = CGSize(width: 100, height: 100)
-	fileprivate var ballRadius = CGFloat(50)
+	fileprivate var ballRadius = CGFloat(30)
 
 	fileprivate var obstacleSize: CGSize {
-		let x = CGFloat.random(50, max: 100)
-		let y = CGFloat.random(50, max: 100)
+		let x = CGFloat.random(50, max: 70)
+		let y = CGFloat.random(50, max: 70)
 		return CGSize(width: x, height: y)
 	}
 	
 	fileprivate var obstacleOrigin : CGPoint {
 		return CGPoint(x: CGFloat.random(50, max: bounds.size.width - exitSize.width), y: CGFloat.random(50, max: bounds.size.height - exitSize.height))
 	}
+
+	func initScene() {
+		createBall()
+		createExit()
+		for _ in 1...GameViewController.level {
+			createObstacle()
+		}
+	}
 	
+	func emptyScene() {
+		obstaclesBehavior.removeItems()
+		ballBehavior.removeItem(ball)
+		exitBehavior.removeItem(exit)
+
+		for view in self.subviews {
+			view.removeFromSuperview()
+		}
+	}
+
 	func createObstacle() {
 		let frame = CGRect(origin: obstacleOrigin, size: obstacleSize)
 		let obstacle = UIView(frame: frame)
+		obstacle.tag = itemTag
+		itemTag += 1
 		obstacle.backgroundColor = UIColor.random
 		
 		addSubview(obstacle)
-		collider!.addItem(obstacle)
+		delegate?.addItemToCollider(obstacle)
 		obstaclesBehavior.addItem(obstacle)
 	}
 	
 	func createBall() {
 		let frame = CGRect(origin: CGPoint.zero, size: obstacleSize)
 
-		let ball = UIView(frame: frame)
+		self.ball = UIView(frame: frame)
+		ball.tag = 0
 		ball.backgroundColor = UIColor.red
 		
 		addSubview(ball)
-		collider!.addItem(ball)
+		delegate?.addItemToCollider(ball)
 		ballBehavior.addItem(ball)
 	}
 
@@ -77,11 +99,12 @@ class GameScene: UIView {
 		
 		frame.origin.x -= exitSize.width
 		frame.origin.y -= exitSize.height
-		let exit = UIView(frame: frame)
+		self.exit = UIView(frame: frame)
+		exit.tag = -1
 		exit.backgroundColor = UIColor.black
 		
 		addSubview(exit)
-		collider!.addItem(exit)
+		delegate?.addItemToCollider(exit)
 		exitBehavior.addItem(exit)
 	}
 	

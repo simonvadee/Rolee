@@ -7,93 +7,146 @@
 //
 
 import UIKit
+import CloudKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	
-	fileprivate var level = 5
-
-	var collider: UICollisionBehavior!
+	static var level = 1
 	
-	var animator: UIDynamicAnimator!
+	private var recognizer: UITapGestureRecognizer!
+	
+	private let container = CKContainer.default()
+	private var publicDB: CKDatabase!
+	private var privateDB: CKDatabase!
 
+	internal var collider: UICollisionBehavior!
+	internal var animator: UIDynamicAnimator!
 
-	@IBOutlet var gameScene: GameScene! {
+	private var startTime: DispatchTime!
+	private var endTime: DispatchTime!
+	private var score: Double!
+
+	@IBOutlet weak var gameScene: GameScene! {
 		didSet {
-			let recognizer = UITapGestureRecognizer(target: self, action:#selector(initScene(_:)))
-			recognizer.addTarget(gameScene, action: #selector(GameScene.snapBall(_:)))
-			gameScene.addGestureRecognizer(recognizer)
+			self.recognizer = UITapGestureRecognizer(target: gameScene, action:#selector(GameScene.snapBall(_:)))
+			
+			self.animator = UIDynamicAnimator(referenceView: gameScene)
+			self.animator.delegate = self
+			
+			self.collider = UICollisionBehavior()
+			self.collider.collisionDelegate = self
+			self.collider.translatesReferenceBoundsIntoBoundary = true
+			
+			self.animator.addBehavior(collider)
+
+			gameScene.delegate = self
 		}
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = true
-
-		self.animator = UIDynamicAnimator(referenceView: gameScene)
-		self.animator.delegate = self
-
-		self.collider = UICollisionBehavior()
-		self.collider.collisionDelegate = self
-		self.collider.translatesReferenceBoundsIntoBoundary = true
 		
-		self.animator.addBehavior(collider)
+		container.accountStatus() { status, error in
+			switch (status) {
+				case .available: print("available")
+				case .couldNotDetermine: print("couldNotDetermine")
+				case .restricted: print("restricted")
+				case .noAccount: print("noAccount")
+			}
+		}
 	}
-
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		gameScene.collider = self.collider
-		gameScene.animator = self.animator
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		gameScene.addGestureRecognizer(self.recognizer)
+		
+		addBehaviorToAnimator(collider)
+		gameScene.initScene()
 		gameScene.animating = true
+
+		self.score = 0
+		self.startTime = DispatchTime.now()
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		gameScene.animating = false
-	}
-	
-	func initScene(_ recognizer: UITapGestureRecognizer) {
-		if recognizer.state == .ended {
-			gameScene.createBall()
-			gameScene.createExit()
-			for _ in 1...level {
-				gameScene.createObstacle()
-			}
+		
+		gameScene.removeGestureRecognizer(recognizer)
+		
+		for item in collider.items {
+			removeItemFromCollider(item as! UIView)
 		}
-		print(self.animator.behaviors)
+		
+		removeBehaviorFromAnimator(collider)
+		gameScene.animating = false
+
+		gameScene.emptyScene()
+	}
+		
+	func collisionBehavior(_ behavior: UICollisionBehavior,
+	                       beganContactFor item1: UIDynamicItem,
+	                       with item2: UIDynamicItem,
+	                       at: CGPoint) {
+		let firstItem = (item1 as? UIView)!.tag
+		let secondItem = (item2 as? UIView)!.tag
+		print(firstItem, secondItem)
+		switch (firstItem, secondItem) {
+		// collision between ball and exit
+		case (0, -1), (-1, 0):
+			self.endTime = DispatchTime.now()
+			self.score = computeScore()
+			performSegue(withIdentifier: "winSegue", sender: self)
+		// collision between ball and obstacle
+		case (0, _), (_, 0):
+			performSegue(withIdentifier: "loseSegue", sender: self)
+		// collision between obstacles and/or exit
+		default:
+			break
+		}
 	}
 	
+	func computeScore() -> Double {
+		let levelTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds) / 100_000_000
+		return (1000 / Double(levelTime))
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		super.prepare(for: segue, sender: sender)
+		let svc = segue.destination as! EndLevelViewController
+
+		switch (segue.identifier!) {
+			case "winSegue":
+				svc.score = self.score
+			case "loseSegue":
+				svc.score = 0
+			default:
+				break
+		}
+	}
 }
 
-extension GameViewController : UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate {
-	
-	func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
-		print("pause")
+extension GameViewController : UIDynamicAnimatorDelegate, GameSceneDelegate {
+	internal func removeItemFromCollider(_ item: UIView) {
+		collider.removeItem(item)
 	}
-	
-	func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {
-		print("resume")
+
+	internal func addItemToCollider(_ item: UIView) {
+		collider.addItem(item)
 	}
-	
-	func collisionBehavior(_: UICollisionBehavior, beganContactFor: UIDynamicItem, with: UIDynamicItem, at: CGPoint) {
-		print("lol")
+
+	internal func removeBehaviorFromAnimator(_ behavior: UIDynamicBehavior) {
+		animator.removeBehavior(behavior)
 	}
-	
-	func collisionBehavior(_ behavior: UICollisionBehavior,
-	                       beganContactFor item: UIDynamicItem,
-	                                           withBoundaryIdentifier identifier: NSCopying?,
-	                                                                  at p: CGPoint) {
-		print(p)
-		// look for the dynamic item behavior
-		let b = self.animator.behaviors
-		if let ix = b.index(where: {$0 is UIDynamicItemBehavior}) {
-			let bounce = b[ix] as! UIDynamicItemBehavior
-			let v = bounce.angularVelocity(for: item)
-			print(v)
-			if v <= 6 {
-				print("adding angular velocity")
-				bounce.addAngularVelocity(6, for:item)
-			}
-		}
+
+	internal func addBehaviorToAnimator(_ behavior: UIDynamicBehavior) {
+		animator.addBehavior(behavior)
 	}
-	
+}
+
+protocol GameSceneDelegate {
+	func addItemToCollider(_ item: UIView)
+	func removeItemFromCollider(_ item: UIView)
+	func addBehaviorToAnimator(_ behavior: UIDynamicBehavior)
+	func removeBehaviorFromAnimator(_ behavior: UIDynamicBehavior)
 }

@@ -12,9 +12,12 @@ class HomeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("homeview loaded")
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 		// Do any additional setup after loading the view, typically from a nib.
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.isNavigationBarHidden = true
+		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
 	}
 	
 	override func didReceiveMemoryWarning() {
