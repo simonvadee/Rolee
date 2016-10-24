@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rolee/GameViewController.swift"
-            timestampString = "498564345.125303"
+            timestampString = "499006249.804765"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "GameViewController"
-            landmarkType = "4">
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "removeItemFromCollider(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

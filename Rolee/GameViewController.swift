@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CloudKit
 
 class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     
@@ -16,10 +15,6 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	
 	private var recognizer: UITapGestureRecognizer!
 	
-	private let container = CKContainer.default()
-	private var publicDB: CKDatabase!
-	private var privateDB: CKDatabase!
-
 	internal var collider: UICollisionBehavior!
 	internal var animator: UIDynamicAnimator!
 
@@ -47,15 +42,7 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.navigationController?.isNavigationBarHidden = true
-		
-		container.accountStatus() { status, error in
-			switch (status) {
-				case .available: print("available")
-				case .couldNotDetermine: print("couldNotDetermine")
-				case .restricted: print("restricted")
-				case .noAccount: print("noAccount")
-			}
-		}
+
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +79,6 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	                       at: CGPoint) {
 		let firstItem = (item1 as? UIView)!.tag
 		let secondItem = (item2 as? UIView)!.tag
-		print(firstItem, secondItem)
 		switch (firstItem, secondItem) {
 		// collision between ball and exit
 		case (0, -1), (-1, 0):
@@ -115,13 +101,13 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		super.prepare(for: segue, sender: sender)
-		let svc = segue.destination as! EndLevelViewController
+		let _ = segue.destination as! EndLevelViewController
 
 		switch (segue.identifier!) {
 			case "winSegue":
-				svc.score = self.score
+				EndLevelViewController.score += self.score
 			case "loseSegue":
-				svc.score = 0
+				break
 			default:
 				break
 		}

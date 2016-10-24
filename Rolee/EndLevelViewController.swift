@@ -7,22 +7,30 @@
 //
 
 import UIKit
+import CloudKit
 
 class EndLevelViewController: UIViewController {
 	
-	var score = Double(0)
+	static var score = Double(0)
+	
+	@IBOutlet weak var levelDisplay: UILabel!
+	@IBOutlet weak var scoreDisplay: UILabel!
+	
+	@IBAction func postScoreToLeaderboard(_ sender: UIButton) {
+		let highscoreRecord = CKRecord(recordType: "Highscore")
+		
+		highscoreRecord["level"] = GameViewController.level as CKRecordValue
+		highscoreRecord["score"] = EndLevelViewController.score as CKRecordValue
+		highscoreRecord["username"] = username as CKRecordValue
+		
+		publicDB.save(highscoreRecord) { record, error in
+			print("\(record)")}
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		if score > 0 {
-			print("::::::::::::::::: score --> \(score)")
-		}
-		else {
-			GameViewController.level = 1
-		}
-		print("\(navigationController?.viewControllers)")
-		// Do any additional setup after loading the view, typically from a nib.
+		levelDisplay.text = "Level " + String(GameViewController.level)
+		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
 	}
 	
 	@IBAction func nextLevel(_ sender: UIButton) {
@@ -32,7 +40,15 @@ class EndLevelViewController: UIViewController {
 	}
 	
 	@IBAction func tryAgain(_ sender: UIButton) {
+		EndLevelViewController.score = 0
+		GameViewController.level = 1
 		_ = navigationController?.popViewController(animated: false)
+	}
+	
+	@IBAction func returnToHome(_ sender: UIButton) {
+		GameViewController.level = 1
+		EndLevelViewController.score = 0
+		_ = navigationController?.popToRootViewController(animated: true)
 	}
 	
 	override func didReceiveMemoryWarning() {
