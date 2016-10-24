@@ -27,6 +27,7 @@
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		42E811791DA115350064BDF7 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811781DA115350064BDF7 /* LevelsViewController.swift */; };
+		F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */; };
 		F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		42E811781DA115350064BDF7 /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RifficFree-Bold.ttf"; sourceTree = "<group>"; };
 		F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				421DC7441DAE75D500C5B11B /* Rolee.entitlements */,
+				F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */,
 				4261CB471DA02E7C00075ADA /* AppDelegate.swift */,
 				4261CB491DA02E7C00075ADA /* ViewController.swift */,
 				42747A7B1DA165E40011E340 /* EndLevelViewController.swift */,
@@ -240,6 +243,7 @@
 			files = (
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
+				F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
