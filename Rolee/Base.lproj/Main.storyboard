@@ -298,7 +298,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-qI-EYU">
-                                <frame key="frameInset" minX="63.58%" minY="164" width="29" height="43"/>
+                                <frame key="frameInset" minX="63.30%" minY="164" width="29" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-qF-UR6">
@@ -306,7 +306,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0q-dn-sd5">
-                                <frame key="frameInset" minX="4.27%" minY="63.83%" width="91.47%" height="161"/>
+                                <frame key="frameInset" minX="4.27%" minY="63.64%" width="91.47%" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6u-q5-Q4y">
@@ -388,7 +388,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-MD-qAI">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.50603448275862073" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHp-CJ-Xuw">
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+
+Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat,</mutableString>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OHp-CJ-Xuw" firstAttribute="centerY" secondItem="O0K-MD-qAI" secondAttribute="centerY" id="ERh-4s-S7k"/>
+                                    <constraint firstItem="OHp-CJ-Xuw" firstAttribute="centerX" secondItem="O0K-MD-qAI" secondAttribute="centerX" id="ORl-B4-kUx"/>
+                                    <constraint firstAttribute="bottom" secondItem="OHp-CJ-Xuw" secondAttribute="bottom" constant="15" id="SmD-jo-DFl"/>
+                                    <constraint firstItem="OHp-CJ-Xuw" firstAttribute="top" secondItem="O0K-MD-qAI" secondAttribute="top" constant="15" id="VYk-iZ-dkI"/>
+                                    <constraint firstItem="OHp-CJ-Xuw" firstAttribute="leading" secondItem="O0K-MD-qAI" secondAttribute="leading" constant="15" id="h2B-2b-ROQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="OHp-CJ-Xuw" secondAttribute="trailing" constant="15" id="paP-AA-zmh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jcz-6K-dpZ">
                                 <color key="onTintColor" red="0.45882352939999999" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -396,14 +417,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3ie-1d-2jm" firstAttribute="top" secondItem="O0K-MD-qAI" secondAttribute="bottom" constant="20" id="Bve-tV-7Jq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O0K-MD-qAI" secondAttribute="trailing" id="Uen-Og-HyL"/>
-                            <constraint firstItem="O0K-MD-qAI" firstAttribute="leading" secondItem="gXA-bh-QH0" secondAttribute="leading" id="WhM-46-FrD"/>
+                            <constraint firstItem="O0K-MD-qAI" firstAttribute="centerX" secondItem="cyX-rW-9ND" secondAttribute="centerX" id="5sc-eY-D0X"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O0K-MD-qAI" secondAttribute="leading" id="6mn-iV-H1n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jcz-6K-dpZ" secondAttribute="trailing" id="9Ge-Qn-ddV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gXA-bh-QH0" secondAttribute="leading" id="C39-6A-5mh"/>
+                            <constraint firstItem="3ie-1d-2jm" firstAttribute="top" secondItem="O0K-MD-qAI" secondAttribute="bottom" constant="20" id="TM3-6M-wRA"/>
+                            <constraint firstItem="gXA-bh-QH0" firstAttribute="top" secondItem="Qmd-Fp-TAv" secondAttribute="bottom" constant="30" id="Ubh-Q2-Zit"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O0K-MD-qAI" secondAttribute="trailing" id="WOG-eK-rTz"/>
                             <constraint firstItem="gXA-bh-QH0" firstAttribute="centerY" secondItem="Jcz-6K-dpZ" secondAttribute="centerY" id="Wqk-vh-qgP"/>
-                            <constraint firstItem="O0K-MD-qAI" firstAttribute="top" secondItem="Jcz-6K-dpZ" secondAttribute="bottom" constant="37" id="dlC-zh-Mvv"/>
-                            <constraint firstItem="O0K-MD-qAI" firstAttribute="top" secondItem="cyX-rW-9ND" secondAttribute="top" constant="151" id="qJd-eT-Zxq"/>
-                            <constraint firstItem="O0K-MD-qAI" firstAttribute="centerX" secondItem="cyX-rW-9ND" secondAttribute="centerX" id="wxG-to-Bm9"/>
-                            <constraint firstItem="O0K-MD-qAI" firstAttribute="trailing" secondItem="Jcz-6K-dpZ" secondAttribute="trailing" id="yhs-Og-wJD"/>
+                            <constraint firstItem="O0K-MD-qAI" firstAttribute="top" secondItem="gXA-bh-QH0" secondAttribute="bottom" constant="42" id="lUR-mO-wMg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="NU1-m6-SNe"/>
