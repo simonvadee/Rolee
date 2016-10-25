@@ -40,7 +40,7 @@ class GameScene: UIView {
 	fileprivate var exitSize = CGSize(width: 80, height: 80)
     fileprivate var ballSize = CGSize(width: 60, height: 60)
     fileprivate var obstacleSize = CGSize(width: 70, height: 70)
-    fileprivate var obstacle2Size = CGSize(width: 90, height: 90)
+    fileprivate var obstacle2Size = CGSize(width: 60, height: 60)
 	fileprivate var ballRadius = CGFloat(30)
 	
 	
