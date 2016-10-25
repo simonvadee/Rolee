@@ -15,7 +15,6 @@
 		423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56271DA7B7430039B7D3 /* ExitBehavior.swift */; };
 		4252C1FB1DA6860800572594 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252C1FA1DA6860800572594 /* GameScene.swift */; };
 		4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB471DA02E7C00075ADA /* AppDelegate.swift */; };
-		4261CB4A1DA02E7C00075ADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB491DA02E7C00075ADA /* ViewController.swift */; };
 		4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB4B1DA02E7C00075ADA /* Main.storyboard */; };
 		4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB4E1DA02E7C00075ADA /* Assets.xcassets */; };
 		4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */; };
@@ -51,7 +50,6 @@
 		4252C1FA1DA6860800572594 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		4261CB441DA02E7C00075ADA /* Rolee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rolee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261CB471DA02E7C00075ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4261CB491DA02E7C00075ADA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4261CB4C1DA02E7C00075ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4261CB4E1DA02E7C00075ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4261CB511DA02E7C00075ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			children = (
 				421DC7441DAE75D500C5B11B /* Rolee.entitlements */,
 				4261CB471DA02E7C00075ADA /* AppDelegate.swift */,
-				4261CB491DA02E7C00075ADA /* ViewController.swift */,
 				42747A7B1DA165E40011E340 /* EndLevelViewController.swift */,
 				42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */,
 				42E811761DA1151A0064BDF7 /* SettingsViewController.swift */,
@@ -260,7 +257,6 @@
 			files = (
 				4252C1FB1DA6860800572594 /* GameScene.swift in Sources */,
 				423A56261DA7B72D0039B7D3 /* ObstacleBehavior.swift in Sources */,
-				4261CB4A1DA02E7C00075ADA /* ViewController.swift in Sources */,
 				4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */,
 				42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */,
 				42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */,
