@@ -24,7 +24,7 @@ class StartViewController: UIViewController {
 
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     //   SystemSoundID.playFileNamed("0957")
+		//SystemSoundID.playFileNamed("0957")
 	}
 }
 
