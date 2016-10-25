@@ -10,10 +10,8 @@ import CoreMotion
 import UIKit
 
 class GameScene: UIView {
- 
-	let manager = CMMotionManager()
 	
-	private var ball: UIView!
+    var ball: UIView!
 	private var exit: UIView!
 	
 	private var itemTag = 1
