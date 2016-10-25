@@ -14,7 +14,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 	
 	private let continuousPush: UIPushBehavior = {
 		let push = UIPushBehavior(items: [], mode: .continuous)
-		push.setAngle( CGFloat(M_PI_2), magnitude: 1)
+		push.setAngle( CGFloat(M_PI_2), magnitude: 6)
 		push.action = {
 			push.angle =  -push.angle
 		}
@@ -31,7 +31,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 	override init() {
 		super.init()
 		addChildBehavior(itemBehavior)
-//		addChildBehavior(continuousPush)
+		addChildBehavior(continuousPush)
 	}
 	
 	func addItem(_ item: UIDynamicItem) {

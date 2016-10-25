@@ -21,12 +21,12 @@
 		4261CB5D1DA02E7C00075ADA /* RoleeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB5C1DA02E7C00075ADA /* RoleeTests.swift */; };
 		42747A7A1DA165590011E340 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42747A791DA165590011E340 /* GameViewController.swift */; };
 		42747A7C1DA165E40011E340 /* EndLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42747A7B1DA165E40011E340 /* EndLevelViewController.swift */; };
+		42CB94AC1DBF59A5007F6946 /* AudioToolboxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB94AB1DBF59A5007F6946 /* AudioToolboxExtension.swift */; };
 		42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811701DA10F780064BDF7 /* StartViewController.swift */; };
 		42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811721DA110D10064BDF7 /* HomeViewController.swift */; };
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */; };
-		F41148121DBE1B8500054CDD /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148111DBE1B8500054CDD /* LevelsTableViewCell.swift */; };
 		F41148161DBE209900054CDD /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148151DBE209900054CDD /* LevelsViewController.swift */; };
 		F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +61,7 @@
 		4261CB5E1DA02E7C00075ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42747A791DA165590011E340 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		42747A7B1DA165E40011E340 /* EndLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndLevelViewController.swift; sourceTree = "<group>"; };
+		42CB94AB1DBF59A5007F6946 /* AudioToolboxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolboxExtension.swift; sourceTree = "<group>"; };
 		42E811701DA10F780064BDF7 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		42E811721DA110D10064BDF7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
+				42CB94AB1DBF59A5007F6946 /* AudioToolboxExtension.swift */,
 				42747A791DA165590011E340 /* GameViewController.swift */,
 				4252C1FA1DA6860800572594 /* GameScene.swift */,
 				423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */,
@@ -269,6 +271,7 @@
 				42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */,
 				F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */,
 				42747A7C1DA165E40011E340 /* EndLevelViewController.swift in Sources */,
+				42CB94AC1DBF59A5007F6946 /* AudioToolboxExtension.swift in Sources */,
 				42747A7A1DA165590011E340 /* GameViewController.swift in Sources */,
 				423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */,
 				423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */,
