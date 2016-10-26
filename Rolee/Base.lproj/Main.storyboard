@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -65,7 +65,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="xUF-pE-Zur" customClass="LevelsTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUF-pE-Zur" id="T75-7Q-Xa9">
                                     <frame key="frameInset" width="375" height="69"/>
@@ -269,8 +269,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="hdE-hO-ljO">
-                                <frame key="frameInset" minX="-329" minY="-579" width="1033" height="1825"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="hdE-hO-ljO">
+                                <frame key="frameInset" minX="-3" width="378" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-P6-w5q" userLabel="Close">
@@ -321,7 +321,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-qI-EYU">
-                                <frame key="frameInset" minX="63.44%" minY="164" width="29" height="43"/>
+                                <frame key="frameInset" minX="63.58%" minY="164" width="29" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-qF-UR6">
@@ -329,7 +329,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0q-dn-sd5">
-                                <frame key="frameInset" minX="4.27%" minY="63.74%" width="91.47%" height="161"/>
+                                <frame key="frameInset" minX="4.27%" minY="63.83%" width="91.47%" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level &lt;X&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6u-q5-Q4y">
@@ -364,7 +364,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-qO-7o0">
                                 <frame key="frameInset" minX="4.27%" minY="84.82%" width="91.47%" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45882352939999999" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.021652295518512221" blue="0.33421765264258663" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Post to leaderboard">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -467,7 +467,7 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HighscoreTableViewCell" rowHeight="70" id="8ab-z0-eck" customClass="HighscoreTableViewCell" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ab-z0-eck" id="oqT-eg-GBc">
                                     <frame key="frameInset" width="375" height="69"/>
@@ -548,21 +548,10 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg-red" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-jg-u9h">
-                                <frame key="frameInset" minX="-167" minY="-383" width="1033" height="1825"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg-red" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-jg-u9h">
+                                <frame key="frameInset" minY="-38" width="375" height="752"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You failed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-so-UMd">
-                                <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="35"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="retry" translatesAutoresizingMaskIntoConstraints="NO" id="861-rT-Oqy"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level &lt;X&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-xB-Nb9">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Y&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO0-h3-g6B">
                                 <frame key="frameInset" minX="50.00%" width="91" height="36" maxY="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -603,6 +592,37 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="broken-ball" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-8y-90T">
+                                <frame key="frameInset" minX="49.85%" minY="167" width="44" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You failed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-so-UMd">
+                                <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level &lt;X&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-xB-Nb9">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-sB-y74">
+                                <frame key="frameInset" minX="4.27%" minY="86.83%" width="91.47%" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.02165229552" blue="0.33421765260000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Post to leaderboard">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postScoreToLeaderboard:" destination="xbp-D5-Oej" eventType="touchUpInside" id="puw-PD-0bb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -611,22 +631,18 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="qFF-Y6-j9v" secondAttribute="bottom" constant="8" symbolic="YES" id="6cu-Ip-0uV"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="3qh-xB-Nb9" secondAttribute="bottom" constant="261" id="9Dg-nT-Liv"/>
                             <constraint firstItem="qFF-Y6-j9v" firstAttribute="trailing" secondItem="CvJ-wG-O6L" secondAttribute="trailing" id="CpT-8i-mbR"/>
-                            <constraint firstItem="861-rT-Oqy" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" id="D3c-v4-6e3"/>
                             <constraint firstItem="qFF-Y6-j9v" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="DBe-QD-qZn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="861-rT-Oqy" secondAttribute="trailing" id="GmV-8h-Qa6"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="XoI-so-UMd" secondAttribute="bottom" constant="100" id="HRr-EN-oio"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qFF-Y6-j9v" secondAttribute="leading" id="Hdb-qD-vgV"/>
                             <constraint firstItem="qFF-Y6-j9v" firstAttribute="leading" secondItem="3qh-xB-Nb9" secondAttribute="leading" id="LKw-9t-HWt"/>
                             <constraint firstItem="XoI-so-UMd" firstAttribute="leading" secondItem="eAC-hC-MFF" secondAttribute="leadingMargin" id="N0x-vs-l1j"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="qFF-Y6-j9v" secondAttribute="bottom" constant="8" symbolic="YES" id="Oug-hv-aAb"/>
-                            <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="861-rT-Oqy" secondAttribute="bottom" constant="200" id="Pa8-Cw-rJs"/>
                             <constraint firstItem="XoI-so-UMd" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="R1j-Vu-MNE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XoI-so-UMd" secondAttribute="trailing" id="Vbd-VZ-rVE"/>
                             <constraint firstItem="CvJ-wG-O6L" firstAttribute="top" secondItem="XoI-so-UMd" secondAttribute="top" id="Z4b-SF-VTU"/>
                             <constraint firstItem="qFF-Y6-j9v" firstAttribute="top" secondItem="XoI-so-UMd" secondAttribute="bottom" constant="44" id="faM-13-vSz"/>
                             <constraint firstItem="3qh-xB-Nb9" firstAttribute="top" secondItem="LgW-Xd-MCf" secondAttribute="bottom" constant="8" symbolic="YES" id="ft1-JU-x04"/>
                             <constraint firstItem="Xyr-3C-jNB" firstAttribute="top" secondItem="3qh-xB-Nb9" secondAttribute="bottom" constant="8" symbolic="YES" id="kw8-8V-ysE"/>
-                            <constraint firstItem="861-rT-Oqy" firstAttribute="leading" secondItem="eAC-hC-MFF" secondAttribute="leadingMargin" id="tfa-Lv-XkS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qFF-Y6-j9v" secondAttribute="trailing" id="uN0-eI-ENV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3qh-xB-Nb9" secondAttribute="trailing" id="yGI-9e-dYN"/>
                         </constraints>
@@ -651,12 +667,12 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
         </scene>
     </scenes>
     <resources>
-        <image name="bg-blue" width="1033" height="1825"/>
-        <image name="bg-red" width="1033" height="1825"/>
+        <image name="bg-blue" width="248" height="438"/>
+        <image name="bg-red" width="248" height="438"/>
+        <image name="broken-ball" width="48" height="46"/>
         <image name="cross" width="21" height="21"/>
         <image name="empty-star" width="29" height="28"/>
         <image name="logo" width="156" height="156"/>
-        <image name="retry" width="35" height="33"/>
         <image name="settings-button" width="48" height="48"/>
         <image name="star" width="44" height="43"/>
     </resources>

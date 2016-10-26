@@ -107,7 +107,7 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-game.png")!)
         super.viewWillAppear(animated)
         gameScene.addGestureRecognizer(self.recognizer)
         

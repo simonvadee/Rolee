@@ -39,13 +39,9 @@ class GameScene: UIView {
 	
 	fileprivate var exitSize = CGSize(width: 80, height: 80)
     fileprivate var ballSize = CGSize(width: 60, height: 60)
+    fileprivate var obstacleSize = CGSize(width: 70, height: 70)
+    fileprivate var obstacle2Size = CGSize(width: 60, height: 60)
 	fileprivate var ballRadius = CGFloat(30)
-
-    fileprivate var obstacleSize: CGSize {
-        let x = CGFloat.random(50, max: 70)
-		let y = CGFloat.random(50, max: 70)
-		return CGSize(width: x, height: y)
-    }
 	
 	
 	fileprivate var obstacleOrigin : CGPoint {
@@ -57,6 +53,7 @@ class GameScene: UIView {
 		createExit()
 		for _ in 1...GameViewController.level {
 			createObstacle()
+            createObstacle2()
 		}
 	}
 	
@@ -82,6 +79,18 @@ class GameScene: UIView {
 		delegate?.addItemToCollider(obstacle)
 		obstaclesBehavior.addItem(obstacle)
 	}
+    
+    func createObstacle2() {
+        let frame = CGRect(origin: obstacleOrigin, size: obstacle2Size)
+        let obstacle = UIView(frame: frame)
+        obstacle.tag = itemTag
+        itemTag += 1
+        
+        obstacle.backgroundColor = UIColor(patternImage: UIImage(named: "obstacle-2.png")!)
+        
+        addSubview(obstacle)
+        delegate?.addItemToCollider(obstacle)
+    }
 	
 	func createBall() {
 		let frame = CGRect(origin: CGPoint.zero, size: ballSize)
