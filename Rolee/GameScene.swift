@@ -15,7 +15,11 @@ class GameScene: UIView {
 	private var exit: UIView!
 	
 	private var itemTag = 1
-	private let ballBehavior = BallBehavior()
+	lazy var ballBehavior: BallBehavior = {
+		let behavior = BallBehavior()
+		behavior.delegate = self
+		return behavior
+	}()
 	private let obstaclesBehavior = ObstacleBehavior()
 	private let exitBehavior = ExitBehavior()
 

@@ -14,6 +14,7 @@ class BallBehavior: UIDynamicBehavior {
 	private var motionManager = CMMotionManager()
 	private var motionQueue = OperationQueue()
 	
+	public var delegate: GameScene!
 	private var ball: UIView!
 	private var snap: UISnapBehavior! {
 		didSet {
@@ -22,7 +23,7 @@ class BallBehavior: UIDynamicBehavior {
 		}
 	}
 		
-	private let customBehavior: UIDynamicItemBehavior = {
+	private var customBehavior: UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
 		behavior.allowsRotation = false
 		return behavior
@@ -39,15 +40,22 @@ class BallBehavior: UIDynamicBehavior {
 		customBehavior.addItem(ball!)
 		
 		// TO REMOVE !!
-		snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
+		// snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
 
 		//Start Recording Data
 		
 		motionManager.startAccelerometerUpdates(to: motionQueue) { [unowned self] accelerometerData, error in
-			if(error != nil) {
-				print("\(error)")
+			if(error == nil) {
+				
+				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
+				let ySpeed = CGFloat(accelerometerData!.acceleration.y)
+				
+				// THIS IS IT !!
+				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed, y: ySpeed), for: self.ball as UIDynamicItem)
+				OperationQueue.main.addOperation { self.delegate.setNeedsLayout() }
+				
+				//self.movePlayer(acceleration: accelerometerData!.acceleration)
 			}
-			self.movePlayer(acceleration: accelerometerData!.acceleration)
 		}
 	}
 
@@ -64,6 +72,7 @@ class BallBehavior: UIDynamicBehavior {
 		}
 		
 		OperationQueue.main.addOperation {
+			self.delegate.setNeedsLayout()
 			// IF THE BALL DOES NOT MOVE, TRY TO PUT THE BELOW CODE HERE
 		}
 	}
