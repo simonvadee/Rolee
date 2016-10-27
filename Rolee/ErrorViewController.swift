@@ -10,7 +10,20 @@ import UIKit
 
 class ErrorViewController: UIViewController {
 
+	@IBOutlet weak var errorLabel: UILabel!
+	
+	var error: String!
+	
+	override func viewWillAppear(_ animated: Bool) {
+		errorLabel.text = error
+	}
+	
 	@IBAction func returnToPreviousScreen(_ sender: UIButton) {
-		_ = navigationController?.popViewController(animated: false)
+		if navigationController != nil {
+			let _ = navigationController?.popViewController(animated: true)
+		}
+		else {
+			self.dismiss(animated: true, completion: nil)
+		}
 	}
 }

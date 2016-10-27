@@ -23,6 +23,7 @@
 		42747A7A1DA165590011E340 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42747A791DA165590011E340 /* GameViewController.swift */; };
 		42747A7C1DA165E40011E340 /* EndLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42747A7B1DA165E40011E340 /* EndLevelViewController.swift */; };
 		42CB94AC1DBF59A5007F6946 /* AudioToolboxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB94AB1DBF59A5007F6946 /* AudioToolboxExtension.swift */; };
+		42CEC9C71DC23F8800D26455 /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148111DBE1B8500054CDD /* LevelsTableViewCell.swift */; };
 		42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811701DA10F780064BDF7 /* StartViewController.swift */; };
 		42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811721DA110D10064BDF7 /* HomeViewController.swift */; };
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
@@ -278,6 +279,7 @@
 				42747A7A1DA165590011E340 /* GameViewController.swift in Sources */,
 				423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */,
 				423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */,
+				42CEC9C71DC23F8800D26455 /* LevelsTableViewCell.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,
 				4255ECC21DC1057A00A21948 /* ErrorViewController.swift in Sources */,

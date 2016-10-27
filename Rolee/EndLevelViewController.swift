@@ -24,10 +24,8 @@ class EndLevelViewController: UIViewController {
 		highscoreRecord["username"] = username as CKRecordValue
 
 		publicDB.save(highscoreRecord) { record, error in
-			print("\(record)")
 		}
 		privateDB.save(highscoreRecord) { record, error in
-			print("\(record)")
 		}
 	}
 	

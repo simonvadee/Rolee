@@ -14,13 +14,15 @@ let container = CKContainer.default()
 var publicDB: CKDatabase!
 var privateDB: CKDatabase!
 var username: CKRecordValue!
-var currentHighscore: CKRecordValue!
+var currentHighscore: CKRecordValue! = 0 as CKRecordValue
 var currentRank: Int!
+var userHasICloud = true
 
 class StartViewController: UIViewController {
 	
 	@IBOutlet weak var loadingLabel: UILabel!
 	@IBOutlet weak var tapToStartRecognizer: UITapGestureRecognizer!
+	private var error: String!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -32,9 +34,13 @@ class StartViewController: UIViewController {
 				privateDB = container.privateCloudDatabase
 				publicDB = container.publicCloudDatabase
 				self.initUserInfoFromCloud()
-			case .couldNotDetermine: print("couldNotDetermine") //error
-			case .restricted: print("restricted") //error
-			case .noAccount: print("noAccount") //error
+			case .noAccount, .restricted, .couldNotDetermine:
+				self.error = "set up an iCloud account for optimal experience !!"
+				userHasICloud = false
+				currentRank = 0
+				currentHighscore = 0 as CKRecordValue
+				username = "Anonymous" as CKRecordValue
+				self.performSegue(withIdentifier: "errorSegue", sender: self)
 			}
 		}
 
@@ -53,8 +59,8 @@ class StartViewController: UIViewController {
 	private func fetchUsername(_ recordId: CKRecordID) {
 		publicDB.fetch(withRecordID: recordId) { record, error in
 			if record != nil {
-				var _username = record!["name"]!
-				if _username as! String == "" {
+				var _username = record!["name"]
+				if _username == nil || _username as! String == "" {
 					_username = "bettrave" as CKRecordValue
 					record!.setObject(_username as CKRecordValue?, forKey: "name")
 					publicDB.save(record!) { record, error in
@@ -70,9 +76,7 @@ class StartViewController: UIViewController {
 	
 	private func fetchHighscoreAndRank(_ recordId: CKRecordID) {
 		
-		let predicate = NSPredicate(value: true)
-		
-		let query = CKQuery(recordType: "Highscore", predicate: predicate)
+		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
 		query.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
 
 		let queryOperation = CKQueryOperation(query: query)
@@ -91,6 +95,13 @@ class StartViewController: UIViewController {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		super.prepare(for: segue, sender: sender)
+		if segue.identifier == "errorSegue" {
+			let errorController = segue.destination as! ErrorViewController
+			self.loadingLabel.text = "Touch to start !"
+			self.tapToStartRecognizer.isEnabled = true
+			
+			errorController.error = error
+		}
 		//SystemSoundID.playFileNamed("0957")
 	}
 }

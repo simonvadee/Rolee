@@ -32,8 +32,7 @@ class LeaderboardViewController: UITableViewController {
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-red.png")!)
 		
-		let predicate = NSPredicate(value: true)
-		let query = CKQuery(recordType: "Highscore", predicate: predicate)
+		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
 		query.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
 
 		let queryOperation = CKQueryOperation(query: query)

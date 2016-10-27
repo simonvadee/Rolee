@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var usernameLabel: UILabel!
 	@IBOutlet weak var highscoreLabel: UILabel!
 	@IBOutlet weak var rankLabel: UILabel!
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
@@ -40,6 +39,27 @@ class HomeViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
+	@IBAction func segueToLeaderboard(_ sender: UIButton) {
+		if !userHasICloud {
+			performSegue(withIdentifier: "errorSegue", sender: sender)
+		}
+	}
 	
+	override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+		return !(identifier == "leaderboardSegue" && userHasICloud == false)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		super.prepare(for: segue, sender: sender)
+
+		switch (segue.identifier!) {
+			case "errorSegue":
+				let errorController = segue.destination as! ErrorViewController
+				errorController.error = "iCloud is not activated..."
+			default:
+				break
+		}
+
+	}
 }
 
