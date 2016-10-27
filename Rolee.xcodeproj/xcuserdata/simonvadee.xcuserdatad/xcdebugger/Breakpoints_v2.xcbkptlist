@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rolee/GameViewController.swift"
-            timestampString = "499006249.804765"
+            timestampString = "499279042.905953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "collisionBehavior(_:beganContactFor:with:at:)"
             landmarkType = "7">
          </BreakpointContent>

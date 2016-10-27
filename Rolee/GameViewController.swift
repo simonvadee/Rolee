@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import CoreMotion
 
 class GameViewController: UIViewController, UICollisionBehaviorDelegate {
-    
-    var motionManager = CMMotionManager()
-    
+        
     static var level = 1
     
     private var recognizer: UITapGestureRecognizer!
@@ -44,34 +41,8 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+	}
         
-        motionManager.accelerometerUpdateInterval = 0.03
-        
-        //Start Recording Data
-        
-        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
-            
-            self.movePlayer(acceleration: accelerometerData!.acceleration)
-            if(NSError != nil) {
-                print("\(NSError)")
-            }
-        }
-    }
-    
-    func movePlayer(acceleration: CMAcceleration){
-        let horizontalSpeed = CGFloat(acceleration.x)
-        let verticalSpeed = CGFloat(acceleration.y)
-        let player = gameScene.ball!
-        
-        if (horizontalSpeed > 0.1 || horizontalSpeed < -0.1) {
-            player.frame.origin.x = player.frame.origin.x + (horizontalSpeed * 10)
-        }
-        
-        if (verticalSpeed > 0.1 || verticalSpeed < -0.1) {
-            player.frame.origin.y = player.frame.origin.y - (verticalSpeed * 10)
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-game.png")!)
         super.viewWillAppear(animated)
