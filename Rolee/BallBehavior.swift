@@ -40,7 +40,7 @@ class BallBehavior: UIDynamicBehavior {
 		customBehavior.addItem(ball!)
 		
 		// TO REMOVE !!
-		// snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
+		snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
 
 		//Start Recording Data
 		
@@ -50,8 +50,8 @@ class BallBehavior: UIDynamicBehavior {
 				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
 				let ySpeed = CGFloat(accelerometerData!.acceleration.y)
 				
-				// THIS IS IT !!
-				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed, y: ySpeed), for: self.ball as UIDynamicItem)
+				// THIS IS IT !?
+				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 10, y: ySpeed * 10), for: self.ball as UIDynamicItem)
 				OperationQueue.main.addOperation { self.delegate.setNeedsLayout() }
 				
 				//self.movePlayer(acceleration: accelerometerData!.acceleration)
