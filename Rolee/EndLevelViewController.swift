@@ -22,15 +22,23 @@ class EndLevelViewController: UIViewController {
 		highscoreRecord["level"] = GameViewController.level as CKRecordValue
 		highscoreRecord["score"] = EndLevelViewController.score as CKRecordValue
 		highscoreRecord["username"] = username as CKRecordValue
-		
+
 		publicDB.save(highscoreRecord) { record, error in
-			print("\(record)")}
+			print("\(record)")
+		}
+		privateDB.save(highscoreRecord) { record, error in
+			print("\(record)")
+		}
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		levelDisplay.text = "Level " + String(GameViewController.level)
 		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
+		
+		if EndLevelViewController.score > currentHighscore as! Double {
+			currentHighscore = EndLevelViewController.score as CKRecordValue
+		}
 	}
 	
 	@IBAction func nextLevel(_ sender: UIButton) {
