@@ -15,10 +15,17 @@ class HighscoreTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-    
+	
+	var score: Score! {
+		didSet {
+			scoreLabel.text = String(format: "%.f", score.score)
+			levelLabel.text = String(score.level)
+			userLabel.text = score.username
+		}
+	}
+	
     override func awakeFromNib() {
         super.awakeFromNib()
-		print("awaken")
         // Initialization code
     }
 

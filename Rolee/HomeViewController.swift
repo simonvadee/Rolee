@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
 	}
 	
 	 private func updateUserInfo() {
-		print("shit")
 		if username != nil {
 			self.usernameLabel.text = username as? String
 		}

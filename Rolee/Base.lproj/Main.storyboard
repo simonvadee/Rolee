@@ -84,8 +84,7 @@
                                 <color key="backgroundColor" red="0.91251963380000001" green="0.69322681429999999" blue="0.99945878980000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
-                                    <action selector="returnToHome:" destination="xbp-D5-Oej" eventType="touchUpInside" id="Vfd-aa-Kxs"/>
-                                    <segue destination="JQP-Fa-t9K" kind="show" id="AKb-Kw-Xv4"/>
+                                    <action selector="returnToPreviousScreen:" destination="FsA-kW-7Sx" eventType="touchUpInside" id="brW-dB-ORc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZT-FD-XYx">
@@ -113,7 +112,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="xUF-pE-Zur" customClass="LevelsTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUF-pE-Zur" id="T75-7Q-Xa9">
                                     <frame key="frameInset" width="375" height="69"/>
@@ -543,7 +542,7 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HighscoreTableViewCell" rowHeight="70" id="8ab-z0-eck" customClass="HighscoreTableViewCell" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ab-z0-eck" id="oqT-eg-GBc">
                                     <frame key="frameInset" width="375" height="69"/>
@@ -662,7 +661,7 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgw-go-J8C">
-                                <frame key="frameInset" minX="49.52%" minY="368" width="60" height="26"/>
+                                <frame key="frameInset" minX="49.37%" minY="368" width="60" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -752,7 +751,4 @@ Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
         <image name="settings-button" width="48" height="48"/>
         <image name="star" width="44" height="43"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="AKb-Kw-Xv4"/>
-    </inferredMetricsTieBreakers>
 </document>

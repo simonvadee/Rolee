@@ -80,7 +80,6 @@ class StartViewController: UIViewController {
 		queryOperation.desiredKeys = ["score"]
 		queryOperation.recordFetchedBlock = { [unowned self] record in
 			currentHighscore = record["score"]
-			print(record)
 			DispatchQueue.main.async {
 				self.loadingLabel.text = "Touch to start !"
 				self.tapToStartRecognizer.isEnabled = true

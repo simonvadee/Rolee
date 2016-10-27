@@ -14,6 +14,7 @@
 		423A56261DA7B72D0039B7D3 /* ObstacleBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */; };
 		423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56271DA7B7430039B7D3 /* ExitBehavior.swift */; };
 		4252C1FB1DA6860800572594 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252C1FA1DA6860800572594 /* GameScene.swift */; };
+		4255ECC21DC1057A00A21948 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4255ECC11DC1057A00A21948 /* ErrorViewController.swift */; };
 		4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261CB471DA02E7C00075ADA /* AppDelegate.swift */; };
 		4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB4B1DA02E7C00075ADA /* Main.storyboard */; };
 		4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4261CB4E1DA02E7C00075ADA /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObstacleBehavior.swift; sourceTree = "<group>"; };
 		423A56271DA7B7430039B7D3 /* ExitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitBehavior.swift; sourceTree = "<group>"; };
 		4252C1FA1DA6860800572594 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4255ECC11DC1057A00A21948 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		4261CB441DA02E7C00075ADA /* Rolee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rolee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261CB471DA02E7C00075ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4261CB4C1DA02E7C00075ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4261CB501DA02E7C00075ADA /* LaunchScreen.storyboard */,
 				4261CB531DA02E7C00075ADA /* Info.plist */,
 				4261CB4B1DA02E7C00075ADA /* Main.storyboard */,
+				4255ECC11DC1057A00A21948 /* ErrorViewController.swift */,
 				42CB94AB1DBF59A5007F6946 /* AudioToolboxExtension.swift */,
 				42747A791DA165590011E340 /* GameViewController.swift */,
 				4252C1FA1DA6860800572594 /* GameScene.swift */,
@@ -277,6 +280,7 @@
 				423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,
+				4255ECC21DC1057A00A21948 /* ErrorViewController.swift in Sources */,
 				423A56281DA7B7430039B7D3 /* ExitBehavior.swift in Sources */,
 				F41148161DBE209900054CDD /* LevelsViewController.swift in Sources */,
 			);
