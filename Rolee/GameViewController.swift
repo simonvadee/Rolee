@@ -59,51 +59,16 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
     func movePlayer(acceleration: CMAcceleration){
+        let horizontalSpeed = CGFloat(acceleration.x)
+        let verticalSpeed = CGFloat(acceleration.y)
         
-        //Positive horizontal movement
-        if(acceleration.x > 0.1) {
-            gameScene.ball.center.x += 2
-            if(acceleration.x > 0.3) {
-                gameScene.ball.center.x += 4
-                if (acceleration.x > 0.6) {
-                    gameScene.ball.center.x += 6
-                }
-            }
+        if (horizontalSpeed > 0.1 || horizontalSpeed < -0.1) {
+            gameScene.ball!.frame.origin.x = gameScene.ball!.frame.origin.x + (horizontalSpeed * 10)
         }
         
-        //Negative horizontal movement
-        if(acceleration.x < -0.1) {
-            gameScene.ball.center.x -= 2
-            if(acceleration.x < -0.3) {
-                gameScene.ball.center.x -= 4
-                if (acceleration.x < -0.6) {
-                    gameScene.ball.center.x -= 6
-                }
-            }
+        if (verticalSpeed > 0.1 || verticalSpeed < -0.1) {
+            gameScene.ball!.frame.origin.y = gameScene.ball!.frame.origin.y - (verticalSpeed * 10)
         }
-        
-        //Positive vertical movement
-        if(acceleration.y < -0.1) {
-            gameScene.ball.center.y += 2
-            if(acceleration.y < -0.3) {
-                gameScene.ball.center.y += 4
-                if (acceleration.y < -0.6) {
-                    gameScene.ball.center.y += 6
-                }
-            }
-        }
-        
-        //Negative vertical movement
-        if(acceleration.y > 0.1) {
-            gameScene.ball.center.y -= 2
-            if(acceleration.y > 0.3) {
-                gameScene.ball.center.y -= 4
-                if (acceleration.y > 0.6) {
-                    gameScene.ball.center.y -= 6
-                }
-            }
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
