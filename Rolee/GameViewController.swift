@@ -61,13 +61,14 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     func movePlayer(acceleration: CMAcceleration){
         let horizontalSpeed = CGFloat(acceleration.x)
         let verticalSpeed = CGFloat(acceleration.y)
+        let player = gameScene.ball!
         
         if (horizontalSpeed > 0.1 || horizontalSpeed < -0.1) {
-            gameScene.ball!.frame.origin.x = gameScene.ball!.frame.origin.x + (horizontalSpeed * 10)
+            player.frame.origin.x = player.frame.origin.x + (horizontalSpeed * 10)
         }
         
         if (verticalSpeed > 0.1 || verticalSpeed < -0.1) {
-            gameScene.ball!.frame.origin.y = gameScene.ball!.frame.origin.y - (verticalSpeed * 10)
+            player.frame.origin.y = player.frame.origin.y - (verticalSpeed * 10)
         }
     }
     
