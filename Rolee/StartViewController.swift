@@ -91,15 +91,15 @@ class StartViewController: UIViewController {
 		queryOperation.resultsLimit = 1
         print("Highscore 4")
 		queryOperation.desiredKeys = ["score"]
-        print("Highscore 5")
-		queryOperation.recordFetchedBlock = { [unowned self] record in
-            print("Highscore 6")
+		queryOperation.recordFetchedBlock = { record in
 			currentHighscore = record["score"]
             print("Highscore 7")
+		}
+		queryOperation.queryCompletionBlock = { [unowned self] cursor, error in
 			DispatchQueue.main.async {
-                print("Highscore 8")
-				self.loadingLabel.text = "Touch to start !"
-				self.tapToStartRecognizer.isEnabled = true
+			print("Highscore 8")
+			self.loadingLabel.text = "Touch to start !"
+			self.tapToStartRecognizer.isEnabled = true
 			}
 		}
 		
