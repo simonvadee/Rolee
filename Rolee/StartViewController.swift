@@ -27,7 +27,6 @@ class StartViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
-        print("Basic 1")
 
 		container.accountStatus() { [unowned self] status, error in
 			switch (status) {
@@ -48,7 +47,6 @@ class StartViewController: UIViewController {
 	}
 	
 	private func initUserInfoFromCloud() {
-	print("Cloud 1")
 		container.fetchUserRecordID() { [unowned self] recordId, error in
 			if error == nil {
 				self.fetchUsername(recordId!)
@@ -58,63 +56,105 @@ class StartViewController: UIViewController {
 	}
 	
 	private func fetchUsername(_ recordId: CKRecordID) {
-        print("Username 1")
 		publicDB.fetch(withRecordID: recordId) { record, error in
 			if record != nil {
-                print("Username 2")
-				var _username = record!["name"]
+				let _username = record!["name"]
 				if _username == nil || _username as! String == "" {
-                    print("Username 3")
-					_username = "bettrave" as CKRecordValue
-					record!.setObject(_username as CKRecordValue?, forKey: "name")
-					publicDB.save(record!) { record, error in
-						username = _username
-					}
+					self.askUserForName(record!)
 				}
 				else {
 					username = _username
-                    print(username)
 				}
 			}
 		}
 	}
 	
+	private func askUserForName(_ userRecord: CKRecord) {
+		let alertController = UIAlertController(title: "Greetings stranger !", message: "Please input your username:", preferredStyle: .alert)
+		
+		let confirmAction = UIAlertAction(title: "Yep that's me", style: .default) { [unowned self] action in
+			let field = alertController.textFields![0] as UITextField
+			if field.text != "" {
+				DispatchQueue.main.async {
+					alertController.message = "Checking if name already exists..."
+				}
+				self.checkIfUsernameExists(field.text!) { usernameExists in
+					if usernameExists {
+						DispatchQueue.main.async {
+							alertController.title = "Sorry"
+							alertController.message = "This name is already taken..."
+							self.present(alertController, animated: true, completion: nil)
+						}
+					}
+					else {
+						let usernameRecord = CKRecord(recordType: "Username")
+						usernameRecord.setObject(field.text! as CKRecordValue?, forKey: "name")
+						userRecord.setObject(field.text! as CKRecordValue?, forKey: "name")
+						publicDB.save(usernameRecord) { (_, _) in }
+						publicDB.save(userRecord) { record, error in
+							username = field.text as! CKRecordValue
+						}
+					}
+				}
+			}
+			else {
+				DispatchQueue.main.async {
+					alertController.title = "Nice try."
+					alertController.message = "Don't get too smart with me"
+					self.present(alertController, animated: true, completion: nil)
+				}
+			}
+		}
+		alertController.addTextField { (textField) in
+			textField.placeholder = "Name"
+		}
+		alertController.addAction(confirmAction)
+		
+		self.present(alertController, animated: true, completion: nil)
+	}
+	
+	private func checkIfUsernameExists(_ name: String, _ completionHandler: @escaping (Bool) -> Void) {
+		let query = CKQuery(recordType: "Username", predicate: NSPredicate(value: true))
+		publicDB.perform(query, inZoneWith: nil) { records, error in
+			if error == nil && records != nil {
+				for record in records! {
+					if record.object(forKey: "name") as? String == name {
+						completionHandler(true)
+						return
+					}
+				}
+				completionHandler(false)
+			}
+		}
+	}
+	
 	private func fetchHighscoreAndRank(_ recordId: CKRecordID) {
-        print("Highscore 1")
 		
 		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
 		query.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
 
-        print("Highscore 2")
 		let queryOperation = CKQueryOperation(query: query)
-        print("Highscore 3")
 		queryOperation.resultsLimit = 1
-        print("Highscore 4")
 		queryOperation.desiredKeys = ["score"]
 		queryOperation.recordFetchedBlock = { record in
 			currentHighscore = record["score"]
-            print("Highscore 7")
 		}
 		queryOperation.queryCompletionBlock = { [unowned self] cursor, error in
 			DispatchQueue.main.async {
-			print("Highscore 8")
 			self.loadingLabel.text = "Touch to start !"
 			self.tapToStartRecognizer.isEnabled = true
 			}
 		}
 		
 		privateDB.add(queryOperation)
-        print("Highscore 9")
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Prepare 1")
 		super.prepare(for: segue, sender: sender)
 		if segue.identifier == "errorSegue" {
 			let errorController = segue.destination as! ErrorViewController
 			self.loadingLabel.text = "Touch to start !"
 			self.tapToStartRecognizer.isEnabled = true
-			print("Prepare 2")
 			errorController.error = error
 		}
 		//SystemSoundID.playFileNamed("0957")
