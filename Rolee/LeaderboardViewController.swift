@@ -29,7 +29,6 @@ class LeaderboardViewController: UITableViewController {
 
 		tableView.estimatedRowHeight = tableView.rowHeight
 		tableView.rowHeight = UITableViewAutomaticDimension
-
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-red.png")!)
 		
 		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))

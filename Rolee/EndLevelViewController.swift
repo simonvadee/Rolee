@@ -27,6 +27,8 @@ class EndLevelViewController: UIViewController {
 		}
 		privateDB.save(highscoreRecord) { record, error in
 		}
+        sender.setTitle("Score has been send", for: UIControlState.normal)
+        sender.backgroundColor = UIColor.init(red: 0.2, green: 0.6, blue: 0.2, alpha: 1.0)
 	}
 	
 	override func viewDidLoad() {
