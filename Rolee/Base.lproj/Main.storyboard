@@ -141,6 +141,9 @@
                             <outlet property="delegate" destination="m46-AU-zln" id="PG9-rQ-79Z"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="ty6-xM-lQm" kind="show" identifier="gameSegue" id="g6f-v8-asG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fd-cJ-0Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -618,7 +621,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6BU-oh-g9N" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RY8-GU-y2y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY8-GU-y2y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -772,6 +775,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
         <image name="star" width="44" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="g6f-v8-asG"/>
         <segue reference="0qz-60-zSt"/>
     </inferredMetricsTieBreakers>
 </document>

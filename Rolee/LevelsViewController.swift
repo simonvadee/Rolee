@@ -32,11 +32,12 @@ class LevelsViewController: UITableViewController {
 	
 	func loadLevelsFromCloud() {
 		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
+
 		query.sortDescriptors = [NSSortDescriptor(key: "level", ascending: false)]
 		
 		let queryOperation = CKQueryOperation(query: query)
 		queryOperation.resultsLimit = 1
-		queryOperation.desiredKeys = ["level"]
+		queryOperation.desiredKeys = ["level", "name"]
 		
 		queryOperation.recordFetchedBlock = { [unowned self] record in
 			DispatchQueue.main.async {
@@ -64,6 +65,13 @@ class LevelsViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return maxLevel
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let beginAtLevel = indexPath.row + 1
+		GameViewController.startingLevel = beginAtLevel
+		GameViewController.currentLevel = beginAtLevel
+		performSegue(withIdentifier: "gameSegue", sender: self)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

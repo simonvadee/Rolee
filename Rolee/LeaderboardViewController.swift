@@ -24,6 +24,11 @@ class LeaderboardViewController: UITableViewController {
 		}
 	}
 	
+	// REQUEST WITH FILTER
+	// 		let filter = username
+	//		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(format: "username == %@", filter as! CVarArg))
+
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 

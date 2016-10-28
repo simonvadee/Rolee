@@ -19,19 +19,17 @@ class EndLevelViewController: UIViewController {
 	@IBAction func postScoreToLeaderboard(_ sender: UIButton) {
 		let highscoreRecord = CKRecord(recordType: "Highscore")
 		
-		highscoreRecord["level"] = GameViewController.level as CKRecordValue
+		highscoreRecord["level"] = GameViewController.currentLevel as CKRecordValue
 		highscoreRecord["score"] = EndLevelViewController.score as CKRecordValue
 		highscoreRecord["username"] = username as CKRecordValue
 
-		publicDB.save(highscoreRecord) { record, error in
-		}
-		privateDB.save(highscoreRecord) { record, error in
-		}
+		publicDB.save(highscoreRecord) { _, _ in }
+		privateDB.save(highscoreRecord) { _, _ in }
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		levelDisplay.text = "Level " + String(GameViewController.level)
+		levelDisplay.text = "Level " + String(GameViewController.currentLevel)
 		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
 		
 		if EndLevelViewController.score > currentHighscore as! Double {
@@ -40,19 +38,19 @@ class EndLevelViewController: UIViewController {
 	}
 	
 	@IBAction func nextLevel(_ sender: UIButton) {
-		GameViewController.level += 1
+		GameViewController.currentLevel += 1
 
 		_ = navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func tryAgain(_ sender: UIButton) {
 		EndLevelViewController.score = 0
-		GameViewController.level = 1
+		GameViewController.currentLevel = GameViewController.startingLevel
 		_ = navigationController?.popViewController(animated: false)
 	}
 	
 	@IBAction func returnToHome(_ sender: UIButton) {
-		GameViewController.level = 1
+		GameViewController.currentLevel = 1
 		EndLevelViewController.score = 0
 		_ = navigationController?.popToRootViewController(animated: true)
 	}

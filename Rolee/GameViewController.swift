@@ -10,7 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController, UICollisionBehaviorDelegate {
         
-    static var level = 1
+    static var currentLevel = 1
+	static var startingLevel = 1
     
     private var recognizer: UITapGestureRecognizer!
     

@@ -55,7 +55,7 @@ class GameScene: UIView {
 	func initScene() {
 		createBall()
 		createExit()
-		for _ in 1...GameViewController.level {
+		for _ in 1...GameViewController.currentLevel {
 			createObstacle()
             createObstacle2()
 		}
