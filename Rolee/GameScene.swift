@@ -42,7 +42,7 @@ class GameScene: UIView {
 	}
 	
 	fileprivate var exitSize = CGSize(width: 80, height: 80)
-    fileprivate var ballSize = CGSize(width: 60, height: 60)
+    fileprivate var ballSize = CGSize(width: 30, height: 30)
     fileprivate var obstacleSize = CGSize(width: 30, height: 30)
     fileprivate var obstacle2Size = CGSize(width: 60, height: 60)
 	fileprivate var ballRadius = CGFloat(30)
@@ -101,7 +101,7 @@ class GameScene: UIView {
 
 		self.ball = UIView(frame: frame)
 		ball.tag = 0
-		ball.backgroundColor = UIColor(patternImage: UIImage(named: "ball.png")!)
+		ball.backgroundColor = UIColor(patternImage: UIImage(named: "small_ball.png")!)
 		
 		addSubview(ball)
 		delegate?.addItemToCollider(ball)
