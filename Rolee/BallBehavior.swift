@@ -40,7 +40,7 @@ class BallBehavior: UIDynamicBehavior {
 		customBehavior.addItem(ball!)
 		
 		// TO REMOVE !!
-		snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
+		//snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
 
 		//Start Recording Data
 		
@@ -48,7 +48,7 @@ class BallBehavior: UIDynamicBehavior {
 			if(error == nil) {
 				
 				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
-				let ySpeed = CGFloat(accelerometerData!.acceleration.y)
+				let ySpeed = CGFloat(accelerometerData!.acceleration.y) * -1
 				
 				// THIS IS IT !?
 				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 10, y: ySpeed * 10), for: self.ball as UIDynamicItem)
