@@ -399,16 +399,16 @@
                                     <action selector="nextLevel:" destination="xbp-D5-Oej" eventType="touchUpInside" id="98x-L1-YrY"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="hsQ-Jb-G0A">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="hsQ-Jb-G0A">
                                 <frame key="frameInset" minX="37.16%" minY="164" width="44" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-qI-EYU">
-                                <frame key="frameInset" minX="63.30%" minY="164" width="29" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-qF-UR6">
                                 <frame key="frameInset" minX="50.58%" minY="164" width="29" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-qI-EYU">
+                                <frame key="frameInset" minX="63.30%" minY="164" width="29" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </imageView>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0q-dn-sd5">
@@ -467,6 +467,9 @@
                     <connections>
                         <outlet property="levelDisplay" destination="B6u-q5-Q4y" id="2dq-fd-SNV"/>
                         <outlet property="scoreDisplay" destination="3jX-OQ-ZHK" id="81i-2i-YTY"/>
+                        <outlet property="star1" destination="hsQ-Jb-G0A" id="Tn2-IW-DH5"/>
+                        <outlet property="star2" destination="Ie0-qF-UR6" id="rYS-go-mSY"/>
+                        <outlet property="star3" destination="PbV-qI-EYU" id="FhI-c2-tRb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz0-DS-OLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -811,7 +814,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
         <image name="star" width="44" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Cel-HN-LUQ"/>
         <segue reference="g6f-v8-asG"/>
-        <segue reference="0qz-60-zSt"/>
     </inferredMetricsTieBreakers>
 </document>

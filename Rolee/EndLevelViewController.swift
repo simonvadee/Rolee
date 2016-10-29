@@ -16,6 +16,10 @@ class EndLevelViewController: UIViewController {
 	@IBOutlet weak var levelDisplay: UILabel!
 	@IBOutlet weak var scoreDisplay: UILabel!
 	
+	@IBOutlet weak var star1: UIImageView!
+	@IBOutlet weak var star2: UIImageView!
+	@IBOutlet weak var star3: UIImageView!
+
 	@IBAction func postScoreToLeaderboard(_ sender: UIButton) {
 		let highscoreRecord = CKRecord(recordType: "Highscore")
 		
@@ -37,6 +41,22 @@ class EndLevelViewController: UIViewController {
 		
 		if EndLevelViewController.score > currentHighscore as! Double {
 			currentHighscore = EndLevelViewController.score as CKRecordValue
+		}
+
+		if star1 != nil {
+			switch (EndLevelViewController.score / Double(GameViewController.currentLevel)) {
+			case 0...30:
+				star1.image = UIImage(named: "star.png")
+			case 30...80:
+				star1.image = UIImage(named: "star.png")
+				star2.image = UIImage(named: "star.png")
+			case 100...10000:
+				star1.image = UIImage(named: "star.png")
+				star2.image = UIImage(named: "star.png")
+				star3.image = UIImage(named: "star.png")
+			default:
+				break
+			}
 		}
 	}
 	
