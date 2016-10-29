@@ -157,7 +157,6 @@ class StartViewController: UIViewController {
 			self.tapToStartRecognizer.isEnabled = true
 			errorController.error = error
 		}
-		//SystemSoundID.playFileNamed("0957")
 	}
 }
 

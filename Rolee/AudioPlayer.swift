@@ -11,7 +11,7 @@ import AVFoundation
 
 class AudioPlayer{
     
-    var audioPlayer = AVAudioPlayer()
+    private var audioPlayer = AVAudioPlayer()
     
     func loadAudioFileNamed(fileName : String, fileExtension : String) {
         do {
