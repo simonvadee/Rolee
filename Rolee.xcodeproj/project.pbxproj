@@ -28,6 +28,10 @@
 		42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811721DA110D10064BDF7 /* HomeViewController.swift */; };
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
+		A0FB658B1DC4D0C400892996 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */; };
+		A0FB658E1DC4D1CF00892996 /* 0707.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0FB658D1DC4D1CF00892996 /* 0707.wav */; };
+		A0FB65901DC4D1DC00892996 /* 0956.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0FB658F1DC4D1DC00892996 /* 0956.wav */; };
+		A0FB65921DC4D1E400892996 /* 0956.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A0FB65911DC4D1E400892996 /* 0956.aiff */; };
 		F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */; };
 		F41148161DBE209900054CDD /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148151DBE209900054CDD /* LevelsViewController.swift */; };
 		F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */; };
@@ -69,6 +73,10 @@
 		42E811721DA110D10064BDF7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		A0FB658D1DC4D1CF00892996 /* 0707.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0707.wav; sourceTree = "<group>"; };
+		A0FB658F1DC4D1DC00892996 /* 0956.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0956.wav; sourceTree = "<group>"; };
+		A0FB65911DC4D1E400892996 /* 0956.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = 0956.aiff; sourceTree = "<group>"; };
 		F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RifficFree-Bold.ttf"; sourceTree = "<group>"; };
 		F41148111DBE1B8500054CDD /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
 		F41148151DBE209900054CDD /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 		4261CB461DA02E7C00075ADA /* Rolee */ = {
 			isa = PBXGroup;
 			children = (
+				A0FB658C1DC4D1A800892996 /* MusicAndSounds */,
 				421DC7441DAE75D500C5B11B /* Rolee.entitlements */,
 				F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */,
 				4261CB471DA02E7C00075ADA /* AppDelegate.swift */,
@@ -141,6 +150,7 @@
 				423A56251DA7B72D0039B7D3 /* ObstacleBehavior.swift */,
 				423A56271DA7B7430039B7D3 /* ExitBehavior.swift */,
 				423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */,
+				A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */,
 			);
 			path = Rolee;
 			sourceTree = "<group>";
@@ -152,6 +162,16 @@
 				4261CB5E1DA02E7C00075ADA /* Info.plist */,
 			);
 			path = RoleeTests;
+			sourceTree = "<group>";
+		};
+		A0FB658C1DC4D1A800892996 /* MusicAndSounds */ = {
+			isa = PBXGroup;
+			children = (
+				A0FB658D1DC4D1CF00892996 /* 0707.wav */,
+				A0FB658F1DC4D1DC00892996 /* 0956.wav */,
+				A0FB65911DC4D1E400892996 /* 0956.aiff */,
+			);
+			name = MusicAndSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
+				A0FB658E1DC4D1CF00892996 /* 0707.wav in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
 				F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */,
+				A0FB65921DC4D1E400892996 /* 0956.aiff in Resources */,
+				A0FB65901DC4D1DC00892996 /* 0956.wav in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +302,7 @@
 				42747A7A1DA165590011E340 /* GameViewController.swift in Sources */,
 				423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */,
 				423A56241DA7B6F20039B7D3 /* BallBehavior.swift in Sources */,
+				A0FB658B1DC4D0C400892996 /* AudioPlayer.swift in Sources */,
 				42CEC9C71DC23F8800D26455 /* LevelsTableViewCell.swift in Sources */,
 				42E811731DA110D10064BDF7 /* HomeViewController.swift in Sources */,
 				42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */,

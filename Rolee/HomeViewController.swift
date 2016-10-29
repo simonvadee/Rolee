@@ -15,8 +15,12 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var usernameLabel: UILabel!
 	@IBOutlet weak var highscoreLabel: UILabel!
 	@IBOutlet weak var rankLabel: UILabel!
+    var audioPlayer = AudioPlayer()
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        audioPlayer.loadAudioFileNamed(fileName: "0956", fileExtension: "aiff")
+        audioPlayer.playBackgroundMusic()
 	}
 	
 	 private func updateUserInfo() {
@@ -24,7 +28,7 @@ class HomeViewController: UIViewController {
 			self.usernameLabel.text = username as? String
 		}
 		if currentHighscore != nil {
-			self.highscoreLabel.text = String(format: "%.f", currentHighscore as! Double)
+			//self.highscoreLabel.text = String(format: "%.f", currentHighscore as! Double)
 		}
 	}
 	
