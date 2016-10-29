@@ -36,11 +36,11 @@ class LeaderboardViewController: UITableViewController {
 		tableView.rowHeight = UITableViewAutomaticDimension
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-red.png")!)
 		
-		let query:CKQuery = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
+		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
 		query.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
 
 		let queryOperation = CKQueryOperation(query: query)
-		queryOperation.resultsLimit = 100
+		queryOperation.resultsLimit = resultsNumber
 		queryOperation.desiredKeys = ["score", "username", "level"]
 		
 		queryOperation.recordFetchedBlock = { [unowned self] record in
