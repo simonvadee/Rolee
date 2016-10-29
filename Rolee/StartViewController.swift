@@ -16,6 +16,7 @@ var privateDB: CKDatabase!
 var username: CKRecordValue!
 var currentHighscore: CKRecordValue! = 0 as CKRecordValue
 var currentRank: Int!
+var userPrivateRecord: CKRecord!
 var userHasICloud = true
 
 class StartViewController: UIViewController {
@@ -58,6 +59,7 @@ class StartViewController: UIViewController {
 	private func fetchUsername(_ recordId: CKRecordID) {
 		publicDB.fetch(withRecordID: recordId) { record, error in
 			if record != nil {
+				userPrivateRecord = record!
 				let _username = record!["name"]
 				if _username == nil || _username as! String == "" {
 					self.askUserForName(record!)
