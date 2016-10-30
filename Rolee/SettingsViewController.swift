@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
 			sender.isUserInteractionEnabled = false
 			return
 		}
-		let alertController = UIAlertController(title: "Greetings \(username) !", message: "Please input your new username:", preferredStyle: .alert)
+		let alertController = UIAlertController(title: "Greetings \(username!)!", message: "Please input your new username:", preferredStyle: .alert)
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 		let confirmAction = UIAlertAction(title: "Change my name!", style: .default) { [unowned self] action in
 			let field = alertController.textFields![0] as UITextField
