@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -118,10 +118,10 @@
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="xUF-pE-Zur" customClass="LevelTableViewCell" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="xUF-pE-Zur" id="T75-7Q-Xa9">
-                                    <frame key="frameInset" width="375" height="69"/>
+                                    <frame key="frameInset" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-I4-Fca">
@@ -466,6 +466,7 @@
                     </view>
                     <connections>
                         <outlet property="levelDisplay" destination="B6u-q5-Q4y" id="2dq-fd-SNV"/>
+                        <outlet property="postButton" destination="Fv5-qO-7o0" id="kIN-WQ-beZ"/>
                         <outlet property="scoreDisplay" destination="3jX-OQ-ZHK" id="81i-2i-YTY"/>
                         <outlet property="star1" destination="hsQ-Jb-G0A" id="Tn2-IW-DH5"/>
                         <outlet property="star2" destination="Ie0-qF-UR6" id="rYS-go-mSY"/>
@@ -577,7 +578,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.46666666666666667" green="0.0" blue="0.24313725490196078" alpha="0.0" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="f2M-x6-2j6">
-                            <rect key="frame" x="0.0" y="64" width="375" height="127"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-pC-wpv">
@@ -624,10 +625,10 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HighscoreTableViewCell" id="8ab-z0-eck" customClass="HighscoreTableViewCell" customModule="Rolee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="219" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="155" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ab-z0-eck" id="oqT-eg-GBc">
-                                    <frame key="frameInset" width="375" height="89"/>
+                                    <frame key="frameInset" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feh-fy-QKd">
@@ -706,7 +707,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6BU-oh-g9N" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RY8-GU-y2y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY8-GU-y2y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -841,6 +842,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                     </view>
                     <connections>
                         <outlet property="levelDisplay" destination="3qh-xB-Nb9" id="rHQ-1a-H6H"/>
+                        <outlet property="postButton" destination="XBr-sB-y74" id="G6u-wb-upL"/>
                         <outlet property="scoreDisplay" destination="lO0-h3-g6B" id="6RC-gQ-1hc"/>
                     </connections>
                 </viewController>

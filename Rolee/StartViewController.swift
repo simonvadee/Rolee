@@ -14,7 +14,7 @@ let container = CKContainer.default()
 var publicDB: CKDatabase!
 var privateDB: CKDatabase!
 var username: CKRecordValue!
-var currentHighscore: CKRecordValue! = 0 as CKRecordValue
+var currentHighscore: Double = 0
 var currentRank: Int!
 var userPrivateRecord: CKRecord!
 var userHasICloud = true
@@ -39,7 +39,7 @@ class StartViewController: UIViewController {
 				self.error = "set up an iCloud account for optimal experience !!"
 				userHasICloud = false
 				currentRank = 0
-				currentHighscore = 0 as CKRecordValue
+				currentHighscore = 0
 				username = "Anonymous" as CKRecordValue
 				self.performSegue(withIdentifier: "errorSegue", sender: self)
 			}
@@ -139,7 +139,7 @@ class StartViewController: UIViewController {
 		queryOperation.resultsLimit = 1
 		queryOperation.desiredKeys = ["score"]
 		queryOperation.recordFetchedBlock = { record in
-			currentHighscore = record["score"]
+			currentHighscore = record["score"] as! Double
 		}
 		queryOperation.queryCompletionBlock = { [unowned self] cursor, error in
 			DispatchQueue.main.async {

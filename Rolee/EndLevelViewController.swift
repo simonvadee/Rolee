@@ -20,6 +20,8 @@ class EndLevelViewController: UIViewController {
 	@IBOutlet weak var star2: UIImageView!
 	@IBOutlet weak var star3: UIImageView!
 
+	@IBOutlet weak var postButton: UIButton!
+	
 	@IBAction func postScoreToLeaderboard(_ sender: UIButton) {
 		let highscoreRecord = CKRecord(recordType: "Highscore")
 		
@@ -39,8 +41,13 @@ class EndLevelViewController: UIViewController {
 		levelDisplay.text = "Level " + String(GameViewController.currentLevel)
 		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
 		
-		if EndLevelViewController.score > currentHighscore as! Double {
-			currentHighscore = EndLevelViewController.score as CKRecordValue
+		if (!userHasICloud) {
+			postButton.setTitle("Leaderboard disabled", for: .disabled)
+			postButton.isEnabled = false
+		}
+		
+		if EndLevelViewController.score > currentHighscore {
+			currentHighscore = EndLevelViewController.score
 		}
 
 		if star1 != nil {
