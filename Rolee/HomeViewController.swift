@@ -28,9 +28,7 @@ class HomeViewController: UIViewController {
 		if username != nil {
 			self.usernameLabel.text = username as? String
 		}
-		if currentHighscore != nil {
-			self.highscoreLabel.text = String(format: "%.f", currentHighscore as! Double)
-		}
+		self.highscoreLabel.text = String(format: "%.f", currentHighscore)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

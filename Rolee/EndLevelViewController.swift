@@ -39,8 +39,8 @@ class EndLevelViewController: UIViewController {
 		levelDisplay.text = "Level " + String(GameViewController.currentLevel)
 		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
 		
-		if EndLevelViewController.score > currentHighscore as! Double {
-			currentHighscore = EndLevelViewController.score as CKRecordValue
+		if EndLevelViewController.score > currentHighscore {
+			currentHighscore = EndLevelViewController.score
 		}
 
 		if star1 != nil {
