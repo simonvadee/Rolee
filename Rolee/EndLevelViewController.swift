@@ -57,7 +57,7 @@ class EndLevelViewController: UIViewController {
 			case 334...999:
 				star1.image = UIImage(named: "star.png")
 				star2.image = UIImage(named: "star.png")
-			case 1000:
+			case 1000...9999:
 				star1.image = UIImage(named: "star.png")
 				star2.image = UIImage(named: "star.png")
 				star3.image = UIImage(named: "star.png")
