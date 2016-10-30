@@ -13,17 +13,19 @@ class SettingsViewController: UIViewController {
 	
 	var audioController: AudioPlayer! = nil
 	
+	@IBOutlet weak var changeUsernameButton: UIButton!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-green.png")!)
-		// Do any additional setup after loading the view, typically from a nib.
+		if (!userHasICloud) {
+			changeUsernameButton.setTitle("iCloud needed to change username", for: .disabled)
+			changeUsernameButton.isEnabled = false
+		}
+	// Do any additional setup after loading the view, typically from a nib.
 	}
 
 	@IBAction func changeUsername(_ sender: UIButton) {
-		if !userHasICloud {
-			sender.isUserInteractionEnabled = false
-			return
-		}
 		let alertController = UIAlertController(title: "Greetings \(username!)!", message: "Please input your new username:", preferredStyle: .alert)
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 		let confirmAction = UIAlertAction(title: "Change my name!", style: .default) { [unowned self] action in
