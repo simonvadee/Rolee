@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -188,17 +188,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="GRV-Vk-ANY"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sG-92-cBP">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.89350961539999996" green="0.89350961539999996" blue="0.89350961539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-5n-UJs">
-                                                <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="20"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-ci-Gya">
                                                 <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -211,11 +201,7 @@
                                             <constraint firstItem="cfA-kU-xRV" firstAttribute="top" secondItem="j4M-fn-mUC" secondAttribute="top" constant="20" id="8QH-Ra-AGZ"/>
                                             <constraint firstItem="mkr-WP-oc5" firstAttribute="leading" secondItem="GRV-Vk-ANY" secondAttribute="trailing" constant="10" id="Fov-YZ-Uu3"/>
                                             <constraint firstItem="x3O-5n-UJs" firstAttribute="leading" secondItem="mkr-WP-oc5" secondAttribute="trailing" constant="7.5" id="IIl-7j-hUd"/>
-                                            <constraint firstItem="zaJ-ci-Gya" firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="VbK-2s-frc"/>
-                                            <constraint firstItem="5sG-92-cBP" firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="c4W-EN-E8z"/>
-                                            <constraint firstItem="zaJ-ci-Gya" firstAttribute="leading" secondItem="5sG-92-cBP" secondAttribute="trailing" constant="7.5" id="gZ6-hl-uM6"/>
                                             <constraint firstItem="GRV-Vk-ANY" firstAttribute="leading" secondItem="j4M-fn-mUC" secondAttribute="leading" constant="10" id="jJx-Za-zya"/>
-                                            <constraint firstAttribute="trailing" secondItem="5sG-92-cBP" secondAttribute="trailing" constant="40" id="sNv-4F-dYw"/>
                                             <constraint firstItem="mkr-WP-oc5" firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="v16-0R-v2x"/>
                                             <constraint firstItem="x3O-5n-UJs" firstAttribute="top" secondItem="cfA-kU-xRV" secondAttribute="bottom" constant="20" id="v5d-NK-D53"/>
                                         </constraints>
@@ -303,7 +289,6 @@
                     <navigationItem key="navigationItem" title="Home" id="zBl-Cr-pBd"/>
                     <connections>
                         <outlet property="highscoreLabel" destination="x3O-5n-UJs" id="ndk-ro-j1r"/>
-                        <outlet property="rankLabel" destination="zaJ-ci-Gya" id="6VV-wB-noH"/>
                         <outlet property="usernameLabel" destination="cfA-kU-xRV" id="mc7-PH-9j4"/>
                         <segue destination="FsA-kW-7Sx" kind="show" identifier="errorSegue" id="0qz-60-zSt"/>
                     </connections>
@@ -710,7 +695,7 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6BU-oh-g9N" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RY8-GU-y2y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RY8-GU-y2y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
