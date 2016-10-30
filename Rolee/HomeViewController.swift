@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
 
 	@IBOutlet weak var usernameLabel: UILabel!
 	@IBOutlet weak var highscoreLabel: UILabel!
-	@IBOutlet weak var rankLabel: UILabel!
 	
 	private let audioPlayer = AudioPlayer()
     
