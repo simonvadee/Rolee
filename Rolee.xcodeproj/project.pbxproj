@@ -28,10 +28,11 @@
 		42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */; };
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		A0FB658B1DC4D0C400892996 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */; };
-		A0FB65921DC4D1E400892996 /* 0956.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A0FB65911DC4D1E400892996 /* 0956.aiff */; };
 		F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */; };
 		F41148161DBE209900054CDD /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148151DBE209900054CDD /* LevelsViewController.swift */; };
 		F42126891DC5FB09004E38D6 /* hopjop.wav in Resources */ = {isa = PBXBuildFile; fileRef = F42126881DC5FB09004E38D6 /* hopjop.wav */; };
+		F421268C1DC63D1A004E38D6 /* spy-hunter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F421268A1DC63D1A004E38D6 /* spy-hunter.mp3 */; };
+		F421268D1DC63D1A004E38D6 /* platformer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F421268B1DC63D1A004E38D6 /* platformer.mp3 */; };
 		F421839E1DAD175B00D1C643 /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +72,12 @@
 		42E811741DA114EE0064BDF7 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		A0FB65911DC4D1E400892996 /* 0956.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = 0956.aiff; sourceTree = "<group>"; };
 		F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RifficFree-Bold.ttf"; sourceTree = "<group>"; };
 		F41148111DBE1B8500054CDD /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
 		F41148151DBE209900054CDD /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		F42126881DC5FB09004E38D6 /* hopjop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hopjop.wav; sourceTree = "<group>"; };
+		F421268A1DC63D1A004E38D6 /* spy-hunter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "spy-hunter.mp3"; sourceTree = "<group>"; };
+		F421268B1DC63D1A004E38D6 /* platformer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = platformer.mp3; sourceTree = "<group>"; };
 		F421839D1DAD175B00D1C643 /* HighscoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				F42126881DC5FB09004E38D6 /* hopjop.wav */,
-				A0FB65911DC4D1E400892996 /* 0956.aiff */,
+				F421268A1DC63D1A004E38D6 /* spy-hunter.mp3 */,
+				F421268B1DC63D1A004E38D6 /* platformer.mp3 */,
 			);
 			name = MusicAndSounds;
 			sourceTree = "<group>";
@@ -264,7 +267,8 @@
 				4261CB521DA02E7C00075ADA /* LaunchScreen.storyboard in Resources */,
 				4261CB4F1DA02E7C00075ADA /* Assets.xcassets in Resources */,
 				F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */,
-				A0FB65921DC4D1E400892996 /* 0956.aiff in Resources */,
+				F421268D1DC63D1A004E38D6 /* platformer.mp3 in Resources */,
+				F421268C1DC63D1A004E38D6 /* spy-hunter.mp3 in Resources */,
 				F42126891DC5FB09004E38D6 /* hopjop.wav in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
