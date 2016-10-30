@@ -45,12 +45,12 @@ class EndLevelViewController: UIViewController {
 
 		if star1 != nil {
 			switch (EndLevelViewController.score / Double(GameViewController.currentLevel)) {
-			case 0...30:
+			case 0...333:
 				star1.image = UIImage(named: "star.png")
-			case 30...80:
+			case 334...999:
 				star1.image = UIImage(named: "star.png")
 				star2.image = UIImage(named: "star.png")
-			case 100...10000:
+			case 1000:
 				star1.image = UIImage(named: "star.png")
 				star2.image = UIImage(named: "star.png")
 				star3.image = UIImage(named: "star.png")
