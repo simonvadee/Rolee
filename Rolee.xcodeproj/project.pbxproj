@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0441DF351DC629A1009B357C /* Swerve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0441DF341DC629A1009B357C /* Swerve.mp3 */; };
 		421CA6341DAEC83C007FAB26 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421CA6331DAEC83C007FAB26 /* GameKit.framework */; };
 		421DC7461DAE77A500C5B11B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421DC7451DAE77A500C5B11B /* CloudKit.framework */; };
 		423A56221DA7B1600039B7D3 /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0441DF341DC629A1009B357C /* Swerve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Swerve.mp3; path = ../../../Downloads/Swerve.mp3; sourceTree = "<group>"; };
 		421CA6331DAEC83C007FAB26 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		421DC7441DAE75D500C5B11B /* Rolee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Rolee.entitlements; sourceTree = "<group>"; };
 		421DC7451DAE77A500C5B11B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -164,7 +162,6 @@
 		A0FB658C1DC4D1A800892996 /* MusicAndSounds */ = {
 			isa = PBXGroup;
 			children = (
-				0441DF341DC629A1009B357C /* Swerve.mp3 */,
 				F42126881DC5FB09004E38D6 /* hopjop.wav */,
 				A0FB65911DC4D1E400892996 /* 0956.aiff */,
 			);
@@ -269,7 +266,6 @@
 				F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */,
 				A0FB65921DC4D1E400892996 /* 0956.aiff in Resources */,
 				F42126891DC5FB09004E38D6 /* hopjop.wav in Resources */,
-				0441DF351DC629A1009B357C /* Swerve.mp3 in Resources */,
 				4261CB4D1DA02E7C00075ADA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

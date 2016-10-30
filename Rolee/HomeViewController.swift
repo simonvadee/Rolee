@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        audioPlayer.loadAudioFileNamed(fileName: "Swerve", fileExtension: "mp3")
+        audioPlayer.loadAudioFileNamed(fileName: "hopjop", fileExtension: "wav")
         audioPlayer.playBackgroundMusic()
 	}
 	

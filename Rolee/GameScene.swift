@@ -55,9 +55,15 @@ class GameScene: UIView {
 	func initScene() {
 		createBall()
 		createExit()
-		for _ in 1...GameViewController.currentLevel {
-			createObstacle()
-            createObstacle2()
+		for i in 1...GameViewController.currentLevel {
+            if(i % 2 == 0)
+            {
+                createObstacle2()
+            }
+            else
+            {
+                createObstacle()
+            }
 		}
 	}
 	
@@ -86,14 +92,15 @@ class GameScene: UIView {
     
     func createObstacle2() {
         let frame = CGRect(origin: obstacleOrigin, size: obstacle2Size)
-        let obstacle = UIView(frame: frame)
-        obstacle.tag = itemTag
+        let obstacle2 = UIView(frame: frame)
+        obstacle2.tag = itemTag
         itemTag += 1
         
-        obstacle.backgroundColor = UIColor(patternImage: UIImage(named: "obstacle-2.png")!)
+        obstacle2.backgroundColor = UIColor(patternImage: UIImage(named: "obstacle-2.png")!)
         
-        addSubview(obstacle)
-        delegate?.addItemToCollider(obstacle)
+        addSubview(obstacle2)
+        delegate?.addItemToCollider(obstacle2)
+        obstaclesBehavior.addholeItem(obstacle2)
     }
 	
 	func createBall() {
