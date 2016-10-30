@@ -564,6 +564,9 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="NU1-m6-SNe"/>
+                    <connections>
+                        <outlet property="changeUsernameButton" destination="x7h-Y5-Zr2" id="SnC-hA-6Eu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0T-2C-CII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
