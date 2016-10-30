@@ -94,7 +94,10 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
     func computeScore() -> Double {
-        let levelTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds) / 100_000_000
+        var levelTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds) / 100_000_000
+        if (levelTime < 1) {
+            levelTime = 1
+        }
         return (1000 / Double(levelTime))
     }
     
