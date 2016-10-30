@@ -18,16 +18,14 @@ struct Score {
 class LeaderboardViewController: UITableViewController {
 	
 	private var resultsNumber = 20
+	
+	private var sortKeys = ["level", "score"]
+	private var predicate = NSPredicate(value: true)
 	private var bestScores: [Score] = [] {
 		didSet {
 			tableView.reloadData()
 		}
 	}
-	
-	// REQUEST WITH FILTER
-	// 		let filter = username
-	//		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(format: "username == %@", filter as! CVarArg))
-
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -36,9 +34,42 @@ class LeaderboardViewController: UITableViewController {
 		tableView.rowHeight = UITableViewAutomaticDimension
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg-red.png")!)
 		
-		let query = CKQuery(recordType: "Highscore", predicate: NSPredicate(value: true))
-		query.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
+		loadTableDataAndDisplay(sortKeys: self.sortKeys, predicate: predicate)
+	}
 
+	@IBAction func searchUsername(_ sender: UITextField) {
+		if sender.text != nil {
+			if sender.text == "" {
+				predicate = NSPredicate(value: true)
+			}
+			else {
+				predicate = NSPredicate(format: "username BEGINSWITH %@", sender.text! as CVarArg)
+			}
+			loadTableDataAndDisplay(sortKeys: sortKeys, predicate: predicate)
+		}
+	}
+
+	
+	@IBAction func sortResults(_ sender: UISwitch) {
+		switch sender.tag {
+		case 1:
+			if !sender.isOn { sortKeys.remove(at: sortKeys.index(of: "score")!) }
+			else { sortKeys.append("score") }
+		case 2:
+			if !sender.isOn { sortKeys.remove(at: sortKeys.index(of: "level")!) }
+			else { sortKeys.append("level") }
+		default:
+			break
+		}
+		loadTableDataAndDisplay(sortKeys: sortKeys, predicate: predicate)
+	}
+	
+	private func loadTableDataAndDisplay(sortKeys: [String], predicate: NSPredicate) {
+		let query = CKQuery(recordType: "Highscore", predicate: predicate)
+		query.sortDescriptors = []
+		for sortKey in sortKeys {
+			query.sortDescriptors!.append(NSSortDescriptor(key: sortKey, ascending: false))
+		}
 		let queryOperation = CKQueryOperation(query: query)
 		queryOperation.resultsLimit = resultsNumber
 		queryOperation.desiredKeys = ["score", "username", "level"]
@@ -51,7 +82,7 @@ class LeaderboardViewController: UITableViewController {
 			}
 			self.refreshControl?.endRefreshing()
 		}
-		
+		self.bestScores = []
 		publicDB.add(queryOperation)
 	}
 	

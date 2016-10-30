@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -584,15 +584,21 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                             <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-pC-wpv">
+                                <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-pC-wpv">
                                     <frame key="frameInset" minY="21" width="51" height="31" maxX="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <color key="onTintColor" red="0.037182136470000002" green="0.20520600629999999" blue="0.18558542810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="sortResults:" destination="db6-mD-ZNU" eventType="valueChanged" id="8j6-Yo-FM0"/>
+                                    </connections>
                                 </switch>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-Nu-hnp">
+                                <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-Nu-hnp">
                                     <frame key="frameInset" minY="67" width="51" height="31" maxX="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <color key="onTintColor" red="0.037182136470000002" green="0.20520600629999999" blue="0.18558542810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="sortResults:" destination="db6-mD-ZNU" eventType="valueChanged" id="ihd-4j-YmS"/>
+                                    </connections>
                                 </switch>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMv-vO-eN4">
                                     <frame key="frameInset" minY="26" width="45" height="21" maxX="84"/>
@@ -622,6 +628,9 @@ This app was built with XCode and swift by Simon Vadee, Tijmen Wiegmans, Iris Po
                                     <color key="textColor" red="1" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="searchUsername:" destination="db6-mD-ZNU" eventType="editingChanged" id="DTo-F7-VWS"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.98042363137359356" blue="0.97500125663774084" alpha="0.0" colorSpace="calibratedRGB"/>
