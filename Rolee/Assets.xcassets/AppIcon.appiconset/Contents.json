@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "app-logo-6.png",
       "scale" : "2x"
     },
     {
@@ -11,8 +12,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "app-logo-1-4.png",
       "scale" : "2x"
     },
     {
@@ -21,8 +23,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "app-logo-1-3.png",
       "scale" : "2x"
     },
     {
@@ -33,7 +36,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "rolee_logo.png",
+      "filename" : "app-logo-1-2.png",
       "scale" : "2x"
     },
     {
@@ -42,28 +45,31 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "ipad",
       "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "app-logo-5.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
       "size" : "20x20",
       "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "app-logo-4.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "ipad",
       "size" : "29x29",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "ipad",
-      "size" : "29x29",
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "app-logo-3.png",
       "scale" : "1x"
     },
     {
@@ -72,8 +78,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "app-logo-2.png",
       "scale" : "1x"
     },
     {
@@ -82,8 +89,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "app-logo-1-1.png",
       "scale" : "2x"
     }
   ],

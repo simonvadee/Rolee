@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jzl-NM-JwU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="ggk-fx-FsD" firstAttribute="centerX" secondItem="mIC-9Z-meK" secondAttribute="centerX" id="Ep9-gf-I02"/>
                             <constraint firstItem="2Gh-6m-blI" firstAttribute="centerX" secondItem="mIC-9Z-meK" secondAttribute="centerX" id="G17-Qm-YHN"/>
-                            <constraint firstItem="2Gh-6m-blI" firstAttribute="top" secondItem="gNb-Kt-aBk" secondAttribute="bottom" constant="71" id="WjO-ds-Gvb"/>
+                            <constraint firstItem="2Gh-6m-blI" firstAttribute="top" secondItem="gNb-Kt-aBk" secondAttribute="bottom" constant="70" id="WjO-ds-Gvb"/>
                             <constraint firstItem="DzH-Bc-XEE" firstAttribute="top" secondItem="ggk-fx-FsD" secondAttribute="bottom" constant="100" id="rqt-YP-jpp"/>
                         </constraints>
                         <connections>
