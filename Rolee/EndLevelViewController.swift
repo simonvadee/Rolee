@@ -22,6 +22,8 @@ class EndLevelViewController: UIViewController {
 
 	@IBOutlet weak var postButton: UIButton!
 	
+	private var highscoreRecord: CKRecord!
+	
 	@IBAction func postScoreToLeaderboard(_ sender: UIButton) {
 		let highscoreRecord = CKRecord(recordType: "Highscore")
 		
@@ -30,7 +32,6 @@ class EndLevelViewController: UIViewController {
 		highscoreRecord["username"] = username as CKRecordValue
 
 		publicDB.save(highscoreRecord) { _, _ in }
-		privateDB.save(highscoreRecord) { _, _ in }
 		sender.isUserInteractionEnabled = false
 		sender.setTitle("Score has been sent", for: UIControlState.normal)
 		sender.backgroundColor = UIColor.init(red: 0.2, green: 0.6, blue: 0.2, alpha: 1.0)
@@ -41,7 +42,15 @@ class EndLevelViewController: UIViewController {
 		levelDisplay.text = "Level " + String(GameViewController.currentLevel)
 		scoreDisplay.text = String(format: "%.f", EndLevelViewController.score)
 		
-		if (!userHasICloud) {
+		if (userHasICloud) {
+			highscoreRecord = CKRecord(recordType: "Highscore")
+			
+			highscoreRecord["level"] = GameViewController.currentLevel as CKRecordValue
+			highscoreRecord["score"] = EndLevelViewController.score as CKRecordValue
+			highscoreRecord["username"] = username as CKRecordValue
+			privateDB.save(highscoreRecord) { _, _ in }
+		}
+		else {
 			postButton.setTitle("Leaderboard disabled", for: .disabled)
 			postButton.isEnabled = false
 		}
