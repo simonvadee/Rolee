@@ -39,9 +39,6 @@ class BallBehavior: UIDynamicBehavior {
 		ball = item as? UIView
 		customBehavior.addItem(ball!)
 		
-		// TO REMOVE !!
-		//snap = UISnapBehavior(item: ball!, snapTo: CGPoint.zero)
-
 		//Start Recording Data
 		
 		motionManager.startAccelerometerUpdates(to: motionQueue) { [unowned self] accelerometerData, error in
@@ -50,30 +47,10 @@ class BallBehavior: UIDynamicBehavior {
 				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
 				let ySpeed = CGFloat(accelerometerData!.acceleration.y) * -1
 				
-				// THIS IS IT !?
 				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 10, y: ySpeed * 10), for: self.ball as UIDynamicItem)
 				OperationQueue.main.addOperation { self.delegate.setNeedsLayout() }
 				
-				//self.movePlayer(acceleration: accelerometerData!.acceleration)
 			}
-		}
-	}
-
-	func movePlayer(acceleration: CMAcceleration){
-		let horizontalSpeed = CGFloat(acceleration.x)
-		let verticalSpeed = CGFloat(acceleration.y)
-		
-		if (horizontalSpeed > 0.1 || horizontalSpeed < -0.1) {
-			ball.center.x += (horizontalSpeed * 10)
-		}
-		
-		if (verticalSpeed > 0.1 || verticalSpeed < -0.1) {
-			ball.center.y -= (verticalSpeed * 10)
-		}
-		
-		OperationQueue.main.addOperation {
-			self.delegate.setNeedsLayout()
-			// IF THE BALL DOES NOT MOVE, TRY TO PUT THE BELOW CODE HERE
 		}
 	}
 
