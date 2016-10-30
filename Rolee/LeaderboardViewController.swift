@@ -53,14 +53,27 @@ class LeaderboardViewController: UITableViewController {
 	@IBAction func sortResults(_ sender: UISwitch) {
 		switch sender.tag {
 		case 1:
-			if !sender.isOn { sortKeys.remove(at: sortKeys.index(of: "score")!) }
-			else { sortKeys.append("score") }
+			if !sender.isOn {
+				if let idx = sortKeys.index(of: "score") {
+					sortKeys.remove(at: idx)
+				}
+			}
+			else if sortKeys.index(of: "score") == nil {
+				sortKeys.append("score")
+			}
 		case 2:
-			if !sender.isOn { sortKeys.remove(at: sortKeys.index(of: "level")!) }
-			else { sortKeys.append("level") }
+			if !sender.isOn {
+				if let idx = sortKeys.index(of: "level") {
+					sortKeys.remove(at: idx)
+				}
+			}
+			else if sortKeys.index(of: "level") == nil {
+				sortKeys.append("level")
+			}
 		default:
 			break
 		}
+		print(sortKeys)
 		loadTableDataAndDisplay(sortKeys: sortKeys, predicate: predicate)
 	}
 	
