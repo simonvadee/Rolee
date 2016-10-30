@@ -27,10 +27,19 @@ class ObstacleBehavior: UIDynamicBehavior {
 		behavior.allowsRotation = true
 		return behavior
 	}()
+    
+    private let holeBehavior : UIDynamicItemBehavior = {
+        let behavior2 = UIDynamicItemBehavior()
+        behavior2.elasticity = 0
+        behavior2.allowsRotation = false
+        behavior2.isAnchored = true
+        return behavior2
+    }()
 	
 	override init() {
 		super.init()
 		addChildBehavior(itemBehavior)
+        addChildBehavior(holeBehavior)
 		addChildBehavior(continuousPush)
 	}
 	
@@ -39,10 +48,16 @@ class ObstacleBehavior: UIDynamicBehavior {
 		continuousPush.addItem(item)
 		items.append(item)
 	}
+    
+    func addholeItem(_ item: UIDynamicItem) {
+        holeBehavior.addItem(item)
+        items.append(item)
+    }
 	
 	func removeItems() {
 		for item in items {
 			itemBehavior.removeItem(item)
+            holeBehavior.removeItem(item)
 			continuousPush.removeItem(item)
 		}
 		items.removeAll()
