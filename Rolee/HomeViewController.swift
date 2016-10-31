@@ -55,6 +55,9 @@ class HomeViewController: UIViewController {
 		super.prepare(for: segue, sender: sender)
 
 		switch (segue.identifier!) {
+			case "gameSegue":
+				GameViewController.currentLevel = 1
+				GameViewController.startingLevel = 1
 			case "errorSegue":
 				let errorController = segue.destination as! ErrorViewController
 				errorController.error = "iCloud is not activated..."

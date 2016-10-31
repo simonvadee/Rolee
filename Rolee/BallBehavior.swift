@@ -48,7 +48,9 @@ class BallBehavior: UIDynamicBehavior {
 				let currentVelocity = self.customBehavior.linearVelocity(for: self.ball as UIDynamicItem)
 				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
 				let ySpeed = CGFloat(accelerometerData!.acceleration.y) * -1
-				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 20, y: ySpeed * 20), for: self.ball as UIDynamicItem)
+				
+				self.customBehavior.addLinearVelocity(CGPoint(x: -(currentVelocity.x / 2), y: -(currentVelocity.y / 2)), for:self.ball as UIDynamicItem)
+				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 300, y: ySpeed * 300), for: self.ball as UIDynamicItem)
 //				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 20, y: ySpeed * 20), for: self.ball as UIDynamicItem)
 				OperationQueue.main.addOperation { self.delegate.setNeedsLayout() }
 				
