@@ -25,6 +25,7 @@ class BallBehavior: UIDynamicBehavior {
 		
 	private var customBehavior: UIDynamicItemBehavior = {
 		let behavior = UIDynamicItemBehavior()
+		behavior.density = 0.5
 		behavior.allowsRotation = false
 		return behavior
 	}()
@@ -44,10 +45,11 @@ class BallBehavior: UIDynamicBehavior {
 		motionManager.startAccelerometerUpdates(to: motionQueue) { [unowned self] accelerometerData, error in
 			if(error == nil) {
 				
+				let currentVelocity = self.customBehavior.linearVelocity(for: self.ball as UIDynamicItem)
 				let xSpeed = CGFloat(accelerometerData!.acceleration.x)
 				let ySpeed = CGFloat(accelerometerData!.acceleration.y) * -1
-				
-				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 10, y: ySpeed * 10), for: self.ball as UIDynamicItem)
+				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 20, y: ySpeed * 20), for: self.ball as UIDynamicItem)
+//				self.customBehavior.addLinearVelocity(CGPoint(x: xSpeed * 20, y: ySpeed * 20), for: self.ball as UIDynamicItem)
 				OperationQueue.main.addOperation { self.delegate.setNeedsLayout() }
 				
 			}
