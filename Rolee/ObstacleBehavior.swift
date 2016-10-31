@@ -45,6 +45,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 	
 	func addItem(_ item: UIDynamicItem) {
 		itemBehavior.addItem(item)
+		itemBehavior.addAngularVelocity(CGFloat(10), for: item)
 		continuousPush.addItem(item)
 		items.append(item)
 	}
