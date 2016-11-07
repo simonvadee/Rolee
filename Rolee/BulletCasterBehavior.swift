@@ -30,7 +30,7 @@ class BulletCasterBehavior : UIDynamicBehavior {
     
     func addBulletCaster(_ item: UIDynamicItem) {
         bulletCasterBehavior.addItem(item)
-        bulletCasterBehavior.addAngularVelocity(CGFloat(10), for: item)
+//        bulletCasterBehavior.addAngularVelocity(CGFloat(10), for: item)
         items.append(item)
     }
     

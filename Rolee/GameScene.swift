@@ -127,7 +127,7 @@ class GameScene: UIView {
         delegate?.addItemToCollider(bulletCaster)
         bulletCasterBehavior.addBulletCaster(bulletCaster)
         
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(createBullet), userInfo: bulletBehavior, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createBullet), userInfo: bulletBehavior, repeats: true)
     }
     
     func createBullet() {

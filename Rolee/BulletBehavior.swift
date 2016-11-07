@@ -14,21 +14,30 @@ class BulletBehavior : UIDynamicBehavior {
     private let audioPlayer = AudioPlayer()
     
     public var ballDelegate : BallDelegate!
-    
+	
+	private let pushBehavior : UIPushBehavior = {
+		let push = UIPushBehavior(items: [], mode: .continuous)
+//		push.setAngle( CGFloat(M_PI_2), magnitude: 1)
+//		push.pushDirection = CGVector(dx: ballDelegate.getBallPosition().x - item.center.x, dy: ballDelegate.getBallPosition().y - item.center.y)
+//		push.pushDirection = CGVector(dx:100, dy: 100)
+		return push
+	}()
+	
     private let bulletBehavior : UIDynamicItemBehavior = {
         let bulletBehavior = UIDynamicItemBehavior()
-        bulletBehavior.allowsRotation = true
-        bulletBehavior.elasticity = 1
-        bulletBehavior.friction = 0
-        return bulletBehavior
+		bulletBehavior.elasticity = 1
+		return bulletBehavior
     }()
-    
+
+	override init() {
+		super.init()
+		addChildBehavior(bulletBehavior)
+		addChildBehavior(pushBehavior)
+	}
+	
     func addBullet(_ item : UIDynamicItem) {
-        let pushBehavior = UIPushBehavior()
-        pushBehavior.pushDirection = CGVector(dx: ballDelegate.getBallPosition().x - item.center.x, dy: ballDelegate.getBallPosition().y - item.center.y)
-        addChildBehavior(pushBehavior)
-        
-        pushBehavior.addItem(item)
+		pushBehavior.pushDirection = CGVector(dx:-2, dy:0)
+		pushBehavior.addItem(item)
         bulletBehavior.addItem(item)
         audioPlayer.loadAudioFileNamed(fileName: "firing", fileExtension: "mp3")
         audioPlayer.playSound()
