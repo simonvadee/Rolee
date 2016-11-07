@@ -14,7 +14,7 @@ class ObstacleBehavior: UIDynamicBehavior {
 	
 	private let continuousPush: UIPushBehavior = {
 		let push = UIPushBehavior(items: [], mode: .continuous)
-		push.setAngle( CGFloat(M_PI_2), magnitude: 6)
+		push.setAngle( CGFloat(M_PI_2), magnitude: 1)
 		push.action = {
 			push.angle =  -push.angle
 		}
@@ -63,5 +63,4 @@ class ObstacleBehavior: UIDynamicBehavior {
 		}
 		items.removeAll()
 	}
-
 }

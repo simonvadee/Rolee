@@ -22,6 +22,8 @@ class GameScene: UIView {
 	}()
 	private let obstaclesBehavior = ObstacleBehavior()
 	private let exitBehavior = ExitBehavior()
+    private let bulletCasterBehavior = BulletCasterBehavior()
+    var timer = Timer()
 
 	var delegate: GameSceneDelegate?
 	lazy var animator: UIDynamicAnimator? = nil
@@ -29,14 +31,17 @@ class GameScene: UIView {
 	var animating: Bool = false {
 		didSet {
 			if animating {
+                bulletCasterBehavior.ballDelegate = ballBehavior
 				delegate?.addBehaviorToAnimator(ballBehavior)
 				delegate?.addBehaviorToAnimator(obstaclesBehavior)
 				delegate?.addBehaviorToAnimator(exitBehavior)
+                delegate?.addBehaviorToAnimator(bulletCasterBehavior)
 			}
 			else {
 				delegate?.removeBehaviorFromAnimator(ballBehavior)
 				delegate?.removeBehaviorFromAnimator(obstaclesBehavior)
 				delegate?.removeBehaviorFromAnimator(exitBehavior)
+                delegate?.removeBehaviorFromAnimator(bulletCasterBehavior)
 			}
 		}
 	}
@@ -45,9 +50,10 @@ class GameScene: UIView {
     fileprivate var ballSize = CGSize(width: 30, height: 30)
     fileprivate var obstacleSize = CGSize(width: 30, height: 30)
     fileprivate var obstacle2Size = CGSize(width: 60, height: 60)
+    fileprivate var bulletCasterSize = CGSize(width: 32, height: 32)
+    fileprivate var bulletSize = CGSize(width: 32, height: 32)
 	fileprivate var ballRadius = CGFloat(30)
-	
-	
+
 	fileprivate var obstacleOrigin : CGPoint {
 		return CGPoint(x: CGFloat.random(50, max: bounds.size.width - exitSize.width), y: CGFloat.random(50, max: bounds.size.height - exitSize.height))
 	}
@@ -55,6 +61,7 @@ class GameScene: UIView {
 	func initScene() {
 		createBall()
 		createExit()
+        createBulletCaster()
 		for i in 1...GameViewController.currentLevel {
             if(i % 2 == 0)
             {
@@ -71,7 +78,7 @@ class GameScene: UIView {
 		obstaclesBehavior.removeItems()
 		ballBehavior.removeItem(ball)
 		exitBehavior.removeItem(exit)
-
+        bulletCasterBehavior.removeItems()
 		for view in self.subviews {
 			view.removeFromSuperview()
 		}
@@ -103,7 +110,35 @@ class GameScene: UIView {
         obstaclesBehavior.addholeItem(obstacle2)
     }
 	
-	func createBall() {
+    func createBulletCaster() {
+        let frame = CGRect(origin: CGPoint(x: 330, y: 20), size: bulletCasterSize)
+        let bulletCaster = UIView(frame: frame)
+        bulletCaster.tag = itemTag
+        itemTag += 1
+        
+        bulletCaster.backgroundColor = UIColor(patternImage: UIImage(named: "bullet-caster.png")!)
+        
+        addSubview(bulletCaster)
+        delegate?.addItemToCollider(bulletCaster)
+        bulletCasterBehavior.addBulletCaster(bulletCaster)
+        
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(createBullet), userInfo: nil, repeats: true)
+    }
+    
+    func createBullet() {
+        let bulletFrame = CGRect(origin: CGPoint(x: 325, y: 35), size: bulletSize)
+        let bullet = UIView(frame: bulletFrame)
+        bullet.tag = itemTag
+        itemTag += 1
+        
+        bullet.backgroundColor = UIColor(patternImage: UIImage(named: "bullet.png")!)
+        
+        addSubview(bullet)
+        delegate?.addItemToCollider(bullet)
+        bulletCasterBehavior.addBullet(bullet)
+    }
+    
+    func createBall() {
 		let frame = CGRect(origin: CGPoint.zero, size: ballSize)
 
 		self.ball = UIView(frame: frame)
@@ -132,5 +167,4 @@ class GameScene: UIView {
 	func snapBall(_ recognizer: UITapGestureRecognizer) {
 		ballBehavior.snapBall(recognizer.location(in: self))
 	}
-	
 }
