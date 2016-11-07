@@ -29,6 +29,7 @@
 		42E811771DA1151A0064BDF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E811761DA1151A0064BDF7 /* SettingsViewController.swift */; };
 		A0BFB07E1DCE41A000F29041 /* BulletCasterBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BFB07D1DCE41A000F29041 /* BulletCasterBehavior.swift */; };
 		A0E5661C1DD09A2A000A98BC /* firing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E5661B1DD09A2A000A98BC /* firing.mp3 */; };
+		A0E5661E1DD0E419000A98BC /* BulletBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5661D1DD0E419000A98BC /* BulletBehavior.swift */; };
 		A0FB658B1DC4D0C400892996 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */; };
 		F411480E1DBE118700054CDD /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */; };
 		F41148161DBE209900054CDD /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41148151DBE209900054CDD /* LevelsViewController.swift */; };
@@ -75,6 +76,7 @@
 		42E811761DA1151A0064BDF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A0BFB07D1DCE41A000F29041 /* BulletCasterBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletCasterBehavior.swift; sourceTree = "<group>"; };
 		A0E5661B1DD09A2A000A98BC /* firing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firing.mp3; sourceTree = "<group>"; };
+		A0E5661D1DD0E419000A98BC /* BulletBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletBehavior.swift; sourceTree = "<group>"; };
 		A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		F411480D1DBE118700054CDD /* RifficFree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RifficFree-Bold.ttf"; sourceTree = "<group>"; };
 		F41148111DBE1B8500054CDD /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				423A56211DA7B1600039B7D3 /* UIKit Extensions.swift */,
 				A0FB658A1DC4D0C400892996 /* AudioPlayer.swift */,
 				A0BFB07D1DCE41A000F29041 /* BulletCasterBehavior.swift */,
+				A0E5661D1DD0E419000A98BC /* BulletBehavior.swift */,
 			);
 			path = Rolee;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				4252C1FB1DA6860800572594 /* GameScene.swift in Sources */,
 				423A56261DA7B72D0039B7D3 /* ObstacleBehavior.swift in Sources */,
 				4261CB481DA02E7C00075ADA /* AppDelegate.swift in Sources */,
+				A0E5661E1DD0E419000A98BC /* BulletBehavior.swift in Sources */,
 				A0BFB07E1DCE41A000F29041 /* BulletCasterBehavior.swift in Sources */,
 				42E811751DA114EE0064BDF7 /* LeaderboardViewController.swift in Sources */,
 				42E811711DA10F780064BDF7 /* StartViewController.swift in Sources */,

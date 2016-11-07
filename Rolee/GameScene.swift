@@ -23,6 +23,7 @@ class GameScene: UIView {
 	private let obstaclesBehavior = ObstacleBehavior()
 	private let exitBehavior = ExitBehavior()
     private let bulletCasterBehavior = BulletCasterBehavior()
+    private let bulletBehavior = BulletBehavior()
     var timer = Timer()
 
 	var delegate: GameSceneDelegate?
@@ -32,16 +33,19 @@ class GameScene: UIView {
 		didSet {
 			if animating {
                 bulletCasterBehavior.ballDelegate = ballBehavior
+                bulletBehavior.ballDelegate = ballBehavior
 				delegate?.addBehaviorToAnimator(ballBehavior)
 				delegate?.addBehaviorToAnimator(obstaclesBehavior)
 				delegate?.addBehaviorToAnimator(exitBehavior)
                 delegate?.addBehaviorToAnimator(bulletCasterBehavior)
+                delegate?.addBehaviorToAnimator(bulletBehavior)
 			}
 			else {
 				delegate?.removeBehaviorFromAnimator(ballBehavior)
 				delegate?.removeBehaviorFromAnimator(obstaclesBehavior)
 				delegate?.removeBehaviorFromAnimator(exitBehavior)
                 delegate?.removeBehaviorFromAnimator(bulletCasterBehavior)
+                delegate?.removeBehaviorFromAnimator(bulletBehavior)
 			}
 		}
 	}
@@ -79,6 +83,7 @@ class GameScene: UIView {
 		ballBehavior.removeItem(ball)
 		exitBehavior.removeItem(exit)
         bulletCasterBehavior.removeItems()
+        bulletBehavior.removeItems()
 		for view in self.subviews {
 			view.removeFromSuperview()
 		}
@@ -122,12 +127,12 @@ class GameScene: UIView {
         delegate?.addItemToCollider(bulletCaster)
         bulletCasterBehavior.addBulletCaster(bulletCaster)
         
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(createBullet), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(createBullet), userInfo: bulletBehavior, repeats: true)
     }
     
     func createBullet() {
-        let bulletFrame = CGRect(origin: CGPoint(x: 325, y: 35), size: bulletSize)
-        let bullet = UIView(frame: bulletFrame)
+        let frame = CGRect(origin: CGPoint(x: 325, y: 35), size: bulletSize)
+        let bullet = UIView(frame: frame)
         bullet.tag = itemTag
         itemTag += 1
         
@@ -135,7 +140,7 @@ class GameScene: UIView {
         
         addSubview(bullet)
         delegate?.addItemToCollider(bullet)
-        bulletCasterBehavior.addBullet(bullet)
+        bulletBehavior.addBullet(bullet)
     }
     
     func createBall() {
