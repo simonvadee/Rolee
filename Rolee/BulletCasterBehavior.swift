@@ -11,7 +11,6 @@ import UIKit
 class BulletCasterBehavior : UIDynamicBehavior {
     
     public var items: [UIDynamicItem] = []
-    private let audioPlayer = AudioPlayer()
     
     public var ballDelegate : BallDelegate!
     
@@ -30,7 +29,6 @@ class BulletCasterBehavior : UIDynamicBehavior {
     
     func addBulletCaster(_ item: UIDynamicItem) {
         bulletCasterBehavior.addItem(item)
-//        bulletCasterBehavior.addAngularVelocity(CGFloat(10), for: item)
         items.append(item)
     }
     
@@ -45,4 +43,3 @@ class BulletCasterBehavior : UIDynamicBehavior {
         items.removeAll()
     }
 }
-

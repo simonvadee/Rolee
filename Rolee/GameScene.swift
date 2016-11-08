@@ -13,6 +13,7 @@ class GameScene: UIView {
 	
     var ball: UIView!
 	private var exit: UIView!
+    var bullet : UIView!
 	
 	private var itemTag = 1
 	lazy var ballBehavior: BallBehavior = {
@@ -23,7 +24,7 @@ class GameScene: UIView {
 	private let obstaclesBehavior = ObstacleBehavior()
 	private let exitBehavior = ExitBehavior()
     private let bulletCasterBehavior = BulletCasterBehavior()
-    private let bulletBehavior = BulletBehavior()
+    public let bulletBehavior = BulletBehavior()
     var timer = Timer()
 
 	var delegate: GameSceneDelegate?
@@ -32,7 +33,6 @@ class GameScene: UIView {
 	var animating: Bool = false {
 		didSet {
 			if animating {
-                bulletCasterBehavior.ballDelegate = ballBehavior
                 bulletBehavior.ballDelegate = ballBehavior
 				delegate?.addBehaviorToAnimator(ballBehavior)
 				delegate?.addBehaviorToAnimator(obstaclesBehavior)
@@ -87,6 +87,7 @@ class GameScene: UIView {
 		for view in self.subviews {
 			view.removeFromSuperview()
 		}
+        timer.invalidate()
 	}
 
 	func createObstacle() {
@@ -127,12 +128,12 @@ class GameScene: UIView {
         delegate?.addItemToCollider(bulletCaster)
         bulletCasterBehavior.addBulletCaster(bulletCaster)
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createBullet), userInfo: bulletBehavior, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(createBullet), userInfo: bulletBehavior, repeats: true)
     }
     
     func createBullet() {
-        let frame = CGRect(origin: CGPoint(x: 325, y: 35), size: bulletSize)
-        let bullet = UIView(frame: frame)
+        let frame = CGRect(origin: CGPoint(x: 320, y: 35), size: bulletSize)
+        bullet = UIView(frame: frame)
         bullet.tag = itemTag
         itemTag += 1
         

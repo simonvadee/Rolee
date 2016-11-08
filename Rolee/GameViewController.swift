@@ -93,6 +93,17 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
         }
     }
     
+    func collisionBehavior(_ behavior: UICollisionBehavior,
+                           endedContactFor item: UIDynamicItem,
+                           withBoundaryIdentifier identifier: NSCopying?) {
+        if(item.isEqual(gameScene.bullet)){
+            self.gameScene.bullet.removeFromSuperview()
+            gameScene.bulletBehavior.removeItem(item)
+            self.removeItemFromCollider(item as! UIView)
+        }
+        
+    }
+    
     func computeScore() -> Double {
         var levelTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds) / 100_000_000
         if (levelTime < 1) {
