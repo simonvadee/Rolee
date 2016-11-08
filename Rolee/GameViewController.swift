@@ -93,6 +93,7 @@ class GameViewController: UIViewController, UICollisionBehaviorDelegate {
         }
     }
     
+    // Collision with borders/boundaries
     func collisionBehavior(_ behavior: UICollisionBehavior,
                            endedContactFor item: UIDynamicItem,
                            withBoundaryIdentifier identifier: NSCopying?) {

@@ -14,7 +14,6 @@ class BallBehavior: UIDynamicBehavior {
 	private var motionManager = CMMotionManager()
 	private var motionQueue = OperationQueue()
     
-	
 	public var delegate: GameScene!
 	internal var ball: UIView!
 	public var snap: UISnapBehavior! {
@@ -80,20 +79,8 @@ extension BallBehavior : BallDelegate {
     internal func getBallPosition() -> CGPoint {
         return self.ball.center
     }
-    
-//    internal func getAngle(_ item : UIDynamicItem) -> CGFloat {
-//        let v1 = CGVector(dx: self.ball.center.x - item.center.x, dy: self.ball.center.y - item.center.y)
-//        let v2 = CGVector(dx: item.center.x - item.center.x, dy: item.center.y - item.center.y)
-//        
-//        let angle = atan2(v2.dy, v2.dx) - atan2(v1.dy, v1.dx)
-//        
-//        let deg = angle * CGFloat(180.0 / M_PI)
-//        
-//        return deg
-//    }
 }
 
 protocol BallDelegate {
     func getBallPosition() -> CGPoint
-//    func getAngle(_ item : UIDynamicItem) -> CGFloat
 }
